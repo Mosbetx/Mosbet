@@ -1,920 +1,728 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="az">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MOSBET Spor</title>
+    <title>Mostbet | Bonuslar, Xəbərlər və İdman</title>
+    <meta name="description" content="Mostbet bonusları, idman xəbərləri və xüsusi təkliflər.">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --green: #08b95b;
-    --green-dark: #079b4d;
-    --dark: #0d1b2d;
-    --text: #10243c;
-    --muted: #61748b;
-    --bg: #f4f6f8;
-    --white: #ffffff;
-    --border: #e2e7ec;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    font-size: 17px;
-}
-
-/* ================= HEADER ================= */
-
-.header {
-    width: 100%;
-    background: #fff;
-    border-bottom: 1px solid #e3e7eb;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.header-inner {
-    max-width: 1500px;
-    margin: auto;
-    min-height: 78px;
-    padding: 0 35px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    color: #10243c;
-}
-
-.logo span {
-    color: var(--green);
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 34px;
-}
-
-.nav a {
-    color: var(--text);
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 700;
-    transition: .2s;
-}
-
-.nav a:hover {
-    color: var(--green);
-}
-
-.about-btn {
-    background: var(--green);
-    color: #fff !important;
-    padding: 13px 22px;
-    border-radius: 12px;
-}
-
-/* ================= MAIN ================= */
-
-.container {
-    width: calc(100% - 50px);
-    max-width: 1500px;
-    margin: 25px auto 60px;
-}
-
-/* ================= HERO ================= */
-
-.hero {
-    min-height: 330px;
-    border-radius: 24px;
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(5, 20, 39, .98) 0%,
-            rgba(5, 25, 46, .91) 42%,
-            rgba(5, 25, 46, .35) 100%
-        ),
-        url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1800&q=85");
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    align-items: center;
-}
-
-.hero-content {
-    padding: 45px 55px;
-    max-width: 850px;
-}
-
-.hero-label {
-    display: inline-block;
-    background: var(--green);
-    color: white;
-    padding: 8px 17px;
-    border-radius: 30px;
-
-    font-size: 15px;
-    font-weight: 800;
-    margin-bottom: 18px;
-}
-
-.hero h1 {
-    color: white;
-    font-size: clamp(42px, 5vw, 76px);
-    line-height: .98;
-    font-weight: 900;
-    margin-bottom: 24px;
-}
-
-.hero h1 span {
-    color: #10d66b;
-}
-
-.hero p {
-    color: #edf3f8;
-    font-size: 19px;
-    line-height: 1.6;
-    max-width: 750px;
-    margin-bottom: 25px;
-}
-
-.hero-links {
-    display: flex;
-    gap: 28px;
-}
-
-.hero-links a {
-    color: white;
-    font-size: 17px;
-    font-weight: 800;
-}
-
-.hero-links a:first-child {
-    color: #10d66b;
-}
-
-/* ================= SECTION ================= */
-
-.section {
-    margin-top: 42px;
-}
-
-.section-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.section-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    font-size: 26px;
-    font-weight: 900;
-}
-
-.section-link {
-    color: var(--green-dark);
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 16px;
-}
-
-/* ================= MATCH CARDS ================= */
-
-.matches {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.match-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 17px;
-    padding: 22px;
-
-    min-height: 185px;
-
-    box-shadow:
-        0 4px 15px rgba(15, 35, 55, .06);
-
-    transition: .2s;
-}
-
-.match-card:hover {
-    transform: translateY(-3px);
-    box-shadow:
-        0 10px 25px rgba(15, 35, 55, .10);
-}
-
-.league {
-    color: #60758d;
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 18px;
-}
-
-.teams {
-    display: grid;
-    grid-template-columns: 1fr 60px 1fr;
-    align-items: center;
-    text-align: center;
-}
-
-.team-circle {
-    width: 48px;
-    height: 48px;
-    margin: auto;
-
-    border-radius: 50%;
-    background: #eafaf2;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--green-dark);
-    font-size: 18px;
-    font-weight: 900;
-}
-
-.team-name {
-    margin-top: 8px;
-    font-size: 15px;
-    font-weight: 800;
-}
-
-.vs {
-    font-size: 18px;
-    font-weight: 900;
-}
-
-.match-time {
-    text-align: center;
-    color: #61748b;
-    margin-top: 12px;
-    font-size: 16px;
-}
-
-.match-details {
-    display: inline-block;
-    margin-top: 15px;
-
-    color: var(--green-dark);
-    font-weight: 800;
-    font-size: 15px;
-}
-
-/* ================= LIVE ================= */
-
-.live-icon {
-    width: 22px;
-    height: 22px;
-    background: #ed1b2f;
-    border-radius: 50%;
-    display: inline-block;
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #222;
-}
-
-.live-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 17px;
-
-    min-height: 125px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    box-shadow: 0 4px 15px rgba(15, 35, 55, .05);
-}
-
-.live-status {
-    color: #e7192d;
-    font-size: 16px;
-    font-weight: 900;
-    margin-bottom: 13px;
-}
-
-.live-score {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-
-    font-size: 19px;
-    font-weight: 700;
-}
-
-.score {
-    font-size: 28px;
-    font-weight: 900;
-}
-
-.live-details {
-    color: var(--green-dark);
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: 800;
-}
-
-/* ================= NEWS ================= */
-
-.news-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.news-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 17px;
-    padding: 23px;
-    min-height: 140px;
-}
-
-.news-card h3 {
-    font-size: 19px;
-    line-height: 1.35;
-    margin-bottom: 12px;
-}
-
-.news-date {
-    color: #708197;
-    font-size: 14px;
-}
-
-/* ================= MOBILE MENU ================= */
-
-.mobile-menu {
-    display: none;
-}
-
-/* ================= TABLET ================= */
-
-@media (max-width: 1000px) {
-
-    .nav {
-        gap: 17px;
-    }
-
-    .nav a {
-        font-size: 15px;
-    }
-
-    .matches,
-    .news-list {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .hero-content {
-        padding: 40px;
-    }
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 700px) {
-
-    body {
-        font-size: 16px;
-    }
-
-    .header-inner {
-        min-height: 70px;
-        padding: 0 18px;
-    }
-
-    .logo {
-        font-size: 24px;
-    }
-
-    .nav {
-        display: none;
-    }
-
-    .mobile-menu {
-        display: block;
-
-        border: 0;
-        background: transparent;
-
-        font-size: 30px;
-        cursor: pointer;
-    }
-
-    .container {
-        width: calc(100% - 28px);
-        margin-top: 15px;
-    }
-
-    /* HERO */
-
-    .hero {
-        min-height: 430px;
-        border-radius: 20px;
-
-        background-position: 65% center;
-    }
-
-    .hero-content {
-        padding: 30px 24px;
-    }
-
-    .hero-label {
-        font-size: 14px;
-        padding: 8px 14px;
-    }
-
-    .hero h1 {
-        font-size: 46px;
-        line-height: 1;
-        margin-bottom: 20px;
-    }
-
-    .hero p {
-        font-size: 17px;
-        line-height: 1.55;
-    }
-
-    .hero-links {
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    /* SECTION */
-
-    .section {
-        margin-top: 32px;
-    }
-
-    .section-header {
-        margin-bottom: 15px;
-    }
-
-    .section-title {
-        font-size: 22px;
-    }
-
-    .section-link {
-        font-size: 14px;
-    }
-
-    /* MATCHES */
-
-    .matches {
-        grid-template-columns: 1fr;
-        gap: 14px;
-    }
-
-    .match-card {
-        padding: 20px;
-        min-height: 185px;
-    }
-
-    .league {
-        font-size: 15px;
-    }
-
-    .team-name {
-        font-size: 16px;
-    }
-
-    .match-time {
-        font-size: 16px;
-    }
-
-    .match-details {
-        font-size: 16px;
-    }
-
-    /* LIVE */
-
-    .live-card {
-        padding: 20px 12px;
-        min-height: 145px;
-    }
-
-    .live-score {
-        gap: 15px;
-        font-size: 16px;
-    }
-
-    .score {
-        font-size: 29px;
-    }
-
-    .live-details {
-        font-size: 15px;
-    }
-
-    /* NEWS */
-
-    .news-list {
-        grid-template-columns: 1fr;
-    }
-
-    .news-card {
-        min-height: 120px;
-    }
-}
-
-/* ================= SMALL PHONES ================= */
-
-@media (max-width: 400px) {
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero-content {
-        padding: 25px 20px;
-    }
-
-    .section-title {
-        font-size: 20px;
-    }
-
-    .live-score {
-        gap: 10px;
-    }
-}
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header class="header">
-
     <div class="header-inner">
 
-        <div class="logo">
-            MOS<span>BET</span>
-        </div>
+        <a href="#" class="logo">
+            <span class="logo-dot"></span>
+            MOSTBET
+        </a>
 
-        <nav class="nav">
-
-            <a href="#">Ana Sayfa</a>
-            <a href="#">⚽ Maçlar</a>
-            <a href="#">▣ Canlı</a>
-            <a href="#">🏆 Haberler</a>
-            <a href="#">▥ Analizler</a>
-
-            <a href="#" class="about-btn">
-                Hakkımızda →
-            </a>
-
+        <nav class="nav" id="nav">
+            <a href="#bonuslar">Bonuslar</a>
+            <a href="#xeberler">Xəbərlər</a>
+            <a href="#canli">Canlı</a>
+            <a href="#haqqimizda">Haqqımızda</a>
         </nav>
 
-        <button class="mobile-menu">
+        <a href="#bonuslar" class="header-btn">
+            Bonuslara bax
+        </a>
+
+        <button class="mobile-menu" id="mobileMenu">
             ☰
         </button>
 
     </div>
-
 </header>
 
 
-<main class="container">
+<!-- ================= HERO ================= -->
 
-    <!-- HERO -->
+<main>
 
-    <section class="hero">
+<section class="hero">
+
+    <div class="hero-background"></div>
+
+    <div class="container hero-inner">
 
         <div class="hero-content">
 
             <div class="hero-label">
-                MOSBET SPOR
+                MOSTBET XÜSUSİ TƏKLİFLƏR
             </div>
 
             <h1>
-                Spor dünyasının
-                <span>merkezi</span>
+                Ən yaxşı bonusları<br>
+                <span>bir yerdə kəşf et</span>
             </h1>
 
             <p>
-                Futbol haberleri, maç programları, canlı skorlar
-                ve spor dünyasından güncel gelişmeler tek platformda.
+                Mostbet bonusları, xüsusi kampaniyalar,
+                casino təklifləri və ən son idman xəbərləri.
             </p>
 
-            <div class="hero-links">
+            <div class="hero-buttons">
 
-                <a href="#">
-                    Maçlara Bak →
+                <a href="#bonuslar" class="main-btn">
+                    Bonusları gör
+                    <span>→</span>
                 </a>
 
-                <a href="#">
-                    Son Haberler →
+                <a href="#xeberler" class="second-btn">
+                    Son xəbərlər
                 </a>
 
             </div>
 
         </div>
 
-    </section>
+        <div class="hero-card">
+
+            <div class="hero-card-top">
+                <span>🔥</span>
+                <small>XÜSUSİ TƏKLİF</small>
+            </div>
+
+            <strong>Mostbet Bonusları</strong>
+
+            <p>
+                Günün ən maraqlı bonus və
+                kampaniyalarını kəşf et.
+            </p>
+
+            <a href="#bonuslar">
+                Təkliflərə bax →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- FEATURED MATCHES -->
+<!-- ================= BONUSLAR ================= -->
 
-    <section class="section">
+<section class="section" id="bonuslar">
+
+    <div class="container">
 
         <div class="section-header">
 
-            <h2 class="section-title">
-                🔥 Öne Çıkan Maçlar
-            </h2>
+            <div>
+                <div class="section-label">
+                    XÜSUSİ TƏKLİFLƏR
+                </div>
 
-            <a class="section-link" href="#">
-                Tüm maçlar →
+                <h2 class="section-title">
+                    Mostbet Bonusları
+                </h2>
+            </div>
+
+            <a href="#bonuslar" class="section-link">
+                Hamısına bax →
             </a>
 
         </div>
 
 
-        <div class="matches">
+        <div class="bonus-grid">
 
-            <!-- MATCH 1 -->
 
-            <article class="match-card">
+            <!-- BONUS 1 -->
 
-                <div class="league">
-                    ⚽ Premier League
+            <a href="https://SENIN-LINKIN-1.com"
+               target="_blank"
+               rel="noopener"
+               class="bonus-card">
+
+                <div class="bonus-icon">
+                    🎁
                 </div>
 
-                <div class="teams">
+                <div class="bonus-content">
 
-                    <div>
-                        <div class="team-circle">M</div>
-                        <div class="team-name">Manchester</div>
-                    </div>
+                    <span class="bonus-label">
+                        MOSTBET BONUS
+                    </span>
 
-                    <div class="vs">VS</div>
+                    <h3>
+                        %50 Depozit Bonusu
+                    </h3>
 
-                    <div>
-                        <div class="team-circle">L</div>
-                        <div class="team-name">Liverpool</div>
-                    </div>
+                    <p>
+                        İlk yatırımınıza xüsusi bonus
+                        fürsətini kəşf edin.
+                    </p>
 
-                </div>
-
-                <div class="match-time">
-                    Bugün · 20:00
-                </div>
-
-                <a class="match-details" href="#">
-                    Maç Detayları →
-                </a>
-
-            </article>
-
-
-            <!-- MATCH 2 -->
-
-            <article class="match-card">
-
-                <div class="league">
-                    ⚽ La Liga
-                </div>
-
-                <div class="teams">
-
-                    <div>
-                        <div class="team-circle">R</div>
-                        <div class="team-name">Real Madrid</div>
-                    </div>
-
-                    <div class="vs">VS</div>
-
-                    <div>
-                        <div class="team-circle">B</div>
-                        <div class="team-name">Barcelona</div>
-                    </div>
+                    <span class="bonus-link">
+                        Bonusu gör →
+                    </span>
 
                 </div>
 
-                <div class="match-time">
-                    Bugün · 22:00
+            </a>
+
+
+            <!-- BONUS 2 -->
+
+            <a href="https://SENIN-LINKIN-2.com"
+               target="_blank"
+               rel="noopener"
+               class="bonus-card">
+
+                <div class="bonus-icon">
+                    🎰
                 </div>
 
-                <a class="match-details" href="#">
-                    Maç Detayları →
-                </a>
+                <div class="bonus-content">
 
-            </article>
+                    <span class="bonus-label">
+                        CASINO
+                    </span>
 
+                    <h3>
+                        100 Free Spins
+                    </h3>
 
-            <!-- MATCH 3 -->
+                    <p>
+                        Seçilmiş casino oyunlarında
+                        xüsusi free spin fürsəti.
+                    </p>
 
-            <article class="match-card">
-
-                <div class="league">
-                    ⚽ Süper Lig
-                </div>
-
-                <div class="teams">
-
-                    <div>
-                        <div class="team-circle">G</div>
-                        <div class="team-name">Galatasaray</div>
-                    </div>
-
-                    <div class="vs">VS</div>
-
-                    <div>
-                        <div class="team-circle">F</div>
-                        <div class="team-name">Fenerbahçe</div>
-                    </div>
+                    <span class="bonus-link">
+                        Təklifi gör →
+                    </span>
 
                 </div>
 
-                <div class="match-time">
-                    Yarın · 20:00
+            </a>
+
+
+            <!-- BONUS 3 -->
+
+            <a href="https://SENIN-LINKIN-3.com"
+               target="_blank"
+               rel="noopener"
+               class="bonus-card">
+
+                <div class="bonus-icon">
+                    ⭐
                 </div>
 
-                <a class="match-details" href="#">
-                    Maç Detayları →
-                </a>
+                <div class="bonus-content">
 
-            </article>
+                    <span class="bonus-label">
+                        XÜSUSİ FÜRSƏT
+                    </span>
+
+                    <h3>
+                        VIP Bonus
+                    </h3>
+
+                    <p>
+                        Xüsusi istifadəçilər üçün
+                        hazırlanmış təkliflər.
+                    </p>
+
+                    <span class="bonus-link">
+                        Ətraflı bax →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- BONUS 4 -->
+
+            <a href="https://SENIN-LINKIN-4.com"
+               target="_blank"
+               rel="noopener"
+               class="bonus-card">
+
+                <div class="bonus-icon">
+                    ⚽
+                </div>
+
+                <div class="bonus-content">
+
+                    <span class="bonus-label">
+                        İDMAN
+                    </span>
+
+                    <h3>
+                        İdman Bonusları
+                    </h3>
+
+                    <p>
+                        İdman mərcləri üçün xüsusi
+                        kampaniya və təkliflər.
+                    </p>
+
+                    <span class="bonus-link">
+                        Təklifi gör →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- BONUS 5 -->
+
+            <a href="https://SENIN-LINKIN-5.com"
+               target="_blank"
+               rel="noopener"
+               class="bonus-card">
+
+                <div class="bonus-icon">
+                    💎
+                </div>
+
+                <div class="bonus-content">
+
+                    <span class="bonus-label">
+                        PREMIUM
+                    </span>
+
+                    <h3>
+                        Xüsusi Premium Təklif
+                    </h3>
+
+                    <p>
+                        Seçilmiş istifadəçilər üçün
+                        xüsusi fürsətlər.
+                    </p>
+
+                    <span class="bonus-link">
+                        Ətraflı bax →
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- BONUS 6 -->
+
+            <a href="https://SENIN-LINKIN-6.com"
+               target="_blank"
+               rel="noopener"
+               class="bonus-card">
+
+                <div class="bonus-icon">
+                    🔥
+                </div>
+
+                <div class="bonus-content">
+
+                    <span class="bonus-label">
+                        YENİ
+                    </span>
+
+                    <h3>
+                        Günün Xüsusi Bonusu
+                    </h3>
+
+                    <p>
+                        Günün ən maraqlı kampaniyasını
+                        indi kəşf edin.
+                    </p>
+
+                    <span class="bonus-link">
+                        Bonusu gör →
+                    </span>
+
+                </div>
+
+            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- LIVE MATCHES -->
+<!-- ================= CANLI ================= -->
 
-    <section class="section">
+<section class="section live-section" id="canli">
+
+    <div class="container">
 
         <div class="section-header">
 
-            <h2 class="section-title">
+            <div>
+                <div class="section-label">
+                    CANLI
+                </div>
 
-                <span class="live-icon"></span>
+                <h2 class="section-title">
+                    Canlı Matçlar
+                </h2>
+            </div>
 
-                Canlı Maçlar
-
-            </h2>
-
-            <a class="section-link" href="#">
-                Tümünü gör →
-            </a>
+            <span class="live-indicator">
+                <span></span>
+                CANLI
+            </span>
 
         </div>
 
 
         <div class="live-card">
 
-            <div class="live-status">
-                🔴 CANLI · 67'
+            <div class="live-left">
+
+                <div class="league">
+                    UEFA CHAMPIONS LEAGUE
+                </div>
+
+                <div class="live-teams">
+
+                    <div class="team">
+                        <div class="team-circle">
+                            A
+                        </div>
+
+                        <strong>
+                            Arsenal
+                        </strong>
+                    </div>
+
+                    <div class="live-score-box">
+
+                        <span>LIVE</span>
+
+                        <strong>
+                            2 : 1
+                        </strong>
+
+                        <small>
+                            67'
+                        </small>
+
+                    </div>
+
+                    <div class="team">
+
+                        <div class="team-circle">
+                            M
+                        </div>
+
+                        <strong>
+                            Milan
+                        </strong>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="live-score">
 
-                <span>
-                    Barcelona
-                </span>
+            <div class="live-right">
 
-                <strong class="score">
-                    2 - 1
-                </strong>
+                <div>
+                    <span class="live-status">
+                        ● CANLI
+                    </span>
 
-                <span>
-                    Real Madrid
-                </span>
+                    <strong>
+                        Matça bax
+                    </strong>
+                </div>
+
+                <a href="#" class="arrow-btn">
+                    →
+                </a>
 
             </div>
-
-            <a href="#" class="live-details">
-                Canlı maç detayları →
-            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- NEWS -->
+<!-- ================= XƏBƏRLƏR ================= -->
 
-    <section class="section">
+<section class="section" id="xeberler">
+
+    <div class="container">
 
         <div class="section-header">
 
-            <h2 class="section-title">
-                📰 Son Haberler
-            </h2>
+            <div>
+                <div class="section-label">
+                    XƏBƏRLƏR
+                </div>
 
-            <a class="section-link" href="#">
-                Tüm haberler →
+                <h2 class="section-title">
+                    Son Xəbərlər
+                </h2>
+            </div>
+
+            <a href="#xeberler" class="section-link">
+                Bütün xəbərlər →
             </a>
 
         </div>
 
 
-        <div class="news-list">
+        <div class="news-grid">
 
-            <article class="news-card">
 
-                <h3>
-                    Futbol dünyasından günün en önemli gelişmeleri
-                </h3>
+            <!-- XƏBƏR 1 -->
 
-                <div class="news-date">
-                    Bugün · 18:30
+            <a href="https://SENIN-XEBER-LINKIN-1.com"
+               target="_blank"
+               rel="noopener"
+               class="news-card">
+
+                <div class="news-top">
+
+                    <span class="news-category">
+                        MOSTBET
+                    </span>
+
+                    <span class="news-date">
+                        Bu gün
+                    </span>
+
                 </div>
 
-            </article>
-
-
-            <article class="news-card">
-
                 <h3>
-                    Takımların maç öncesi son durumları
+                    Mostbet yeni bonus kampaniyasını təqdim etdi
                 </h3>
 
-                <div class="news-date">
-                    Bugün · 17:45
+                <p>
+                    Ən son kampaniya və xüsusi təkliflər
+                    haqqında məlumat əldə edin.
+                </p>
+
+                <span class="read-more">
+                    Xəbəri oxu →
+                </span>
+
+            </a>
+
+
+            <!-- XƏBƏR 2 -->
+
+            <a href="https://SENIN-XEBER-LINKIN-2.com"
+               target="_blank"
+               rel="noopener"
+               class="news-card">
+
+                <div class="news-top">
+
+                    <span class="news-category">
+                        CASINO
+                    </span>
+
+                    <span class="news-date">
+                        Bu gün
+                    </span>
+
                 </div>
-
-            </article>
-
-
-            <article class="news-card">
 
                 <h3>
-                    Haftanın öne çıkan karşılaşmaları
+                    Yeni casino bonusları artıq aktivdir
                 </h3>
 
-                <div class="news-date">
-                    Bugün · 16:20
+                <p>
+                    Casino dünyasındakı ən son bonus və
+                    kampaniyalara nəzər salın.
+                </p>
+
+                <span class="read-more">
+                    Xəbəri oxu →
+                </span>
+
+            </a>
+
+
+            <!-- XƏBƏR 3 -->
+
+            <a href="https://SENIN-XEBER-LINKIN-3.com"
+               target="_blank"
+               rel="noopener"
+               class="news-card">
+
+                <div class="news-top">
+
+                    <span class="news-category">
+                        İDMAN
+                    </span>
+
+                    <span class="news-date">
+                        Dünən
+                    </span>
+
                 </div>
 
-            </article>
+                <h3>
+                    Günün ən vacib idman xəbərləri
+                </h3>
+
+                <p>
+                    Futbol və digər idman növlərindən
+                    ən son xəbərlər.
+                </p>
+
+                <span class="read-more">
+                    Xəbəri oxu →
+                </span>
+
+            </a>
+
+
+            <!-- XƏBƏR 4 -->
+
+            <a href="https://SENIN-XEBER-LINKIN-4.com"
+               target="_blank"
+               rel="noopener"
+               class="news-card">
+
+                <div class="news-top">
+
+                    <span class="news-category">
+                        BONUS
+                    </span>
+
+                    <span class="news-date">
+                        Dünən
+                    </span>
+
+                </div>
+
+                <h3>
+                    Həftənin xüsusi bonus təklifləri
+                </h3>
+
+                <p>
+                    Bu həftənin seçilmiş bonus və
+                    xüsusi fürsətlərini kəşf edin.
+                </p>
+
+                <span class="read-more">
+                    Ətraflı oxu →
+                </span>
+
+            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+
+<!-- ================= HAQQIMIZDA ================= -->
+
+<section class="about-section" id="haqqimizda">
+
+    <div class="container">
+
+        <div class="about-box">
+
+            <div>
+
+                <div class="section-label">
+                    MOSTBET
+                </div>
+
+                <h2>
+                    Bonuslar və idman xəbərləri
+                    bir yerdə
+                </h2>
+
+                <p>
+                    Ən son bonus təkliflərini, casino
+                    kampaniyalarını və idman xəbərlərini
+                    rahat şəkildə izləyin.
+                </p>
+
+            </div>
+
+            <a href="#bonuslar" class="main-btn">
+                Bonuslara bax →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 
 
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <div class="footer-logo">
+            <span class="logo-dot"></span>
+            MOSTBET
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#bonuslar">
+                Bonuslar
+            </a>
+
+            <a href="#xeberler">
+                Xəbərlər
+            </a>
+
+            <a href="#canli">
+                Canlı
+            </a>
+
+            <a href="#haqqimizda">
+                Haqqımızda
+            </a>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Mostbet. Bütün hüquqlar qorunur.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
 
-/* Mobil menyu üçün sadə davranış */
+const mobileMenu = document.getElementById("mobileMenu");
+const nav = document.getElementById("nav");
 
-const menuButton = document.querySelector(".mobile-menu");
-const nav = document.querySelector(".nav");
+mobileMenu.addEventListener("click", function () {
+    nav.classList.toggle("active");
+});
 
-menuButton.addEventListener("click", function () {
+document.querySelectorAll(".nav a").forEach(function(link) {
 
-    if (nav.style.display === "flex") {
-        nav.style.display = "none";
-    } else {
-
-        nav.style.display = "flex";
-
-        nav.style.position = "absolute";
-        nav.style.top = "70px";
-        nav.style.left = "0";
-        nav.style.right = "0";
-
-        nav.style.background = "#fff";
-        nav.style.padding = "20px";
-
-        nav.style.flexDirection = "column";
-        nav.style.alignItems = "stretch";
-
-        nav.style.gap = "18px";
-
-        nav.style.boxShadow =
-            "0 10px 25px rgba(0,0,0,.10)";
-    }
+    link.addEventListener("click", function() {
+        nav.classList.remove("active");
+    });
 
 });
 
