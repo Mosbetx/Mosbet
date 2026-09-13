@@ -1,123 +1,636 @@
 <!DOCTYPE html>
-
 <html lang="tr">
-
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<title>MOSBET Spor</title>
 
-<meta
-    name="description"
-    content="Mosbet - Güncel spor haberleri, maçlar, canlı skorlar ve spor analizleri."
->
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<meta
-    name="robots"
-    content="index, follow"
->
+:root {
+    --green: #08b95b;
+    --green-dark: #079b4d;
+    --dark: #0d1b2d;
+    --text: #10243c;
+    --muted: #61748b;
+    --bg: #f4f6f8;
+    --white: #ffffff;
+    --border: #e2e7ec;
+}
 
-<title>Mosbet - Spor Haberleri ve Maçlar</title>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 17px;
+}
 
-<link
-    rel="stylesheet"
-    href="style.css"
->
+/* ================= HEADER ================= */
 
+.header {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e3e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: 1500px;
+    margin: auto;
+    min-height: 78px;
+    padding: 0 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #10243c;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.nav a:hover {
+    color: var(--green);
+}
+
+.about-btn {
+    background: var(--green);
+    color: #fff !important;
+    padding: 13px 22px;
+    border-radius: 12px;
+}
+
+/* ================= MAIN ================= */
+
+.container {
+    width: calc(100% - 50px);
+    max-width: 1500px;
+    margin: 25px auto 60px;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 330px;
+    border-radius: 24px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 20, 39, .98) 0%,
+            rgba(5, 25, 46, .91) 42%,
+            rgba(5, 25, 46, .35) 100%
+        ),
+        url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    padding: 45px 55px;
+    max-width: 850px;
+}
+
+.hero-label {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    padding: 8px 17px;
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: clamp(42px, 5vw, 76px);
+    line-height: .98;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: #10d66b;
+}
+
+.hero p {
+    color: #edf3f8;
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 750px;
+    margin-bottom: 25px;
+}
+
+.hero-links {
+    display: flex;
+    gap: 28px;
+}
+
+.hero-links a {
+    color: white;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.hero-links a:first-child {
+    color: #10d66b;
+}
+
+/* ================= SECTION ================= */
+
+.section {
+    margin-top: 42px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.section-link {
+    color: var(--green-dark);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+/* ================= MATCH CARDS ================= */
+
+.matches {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.match-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    padding: 22px;
+
+    min-height: 185px;
+
+    box-shadow:
+        0 4px 15px rgba(15, 35, 55, .06);
+
+    transition: .2s;
+}
+
+.match-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 10px 25px rgba(15, 35, 55, .10);
+}
+
+.league {
+    color: #60758d;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.teams {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: center;
+    text-align: center;
+}
+
+.team-circle {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+
+    border-radius: 50%;
+    background: #eafaf2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--green-dark);
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.team-name {
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.vs {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.match-time {
+    text-align: center;
+    color: #61748b;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.match-details {
+    display: inline-block;
+    margin-top: 15px;
+
+    color: var(--green-dark);
+    font-weight: 800;
+    font-size: 15px;
+}
+
+/* ================= LIVE ================= */
+
+.live-icon {
+    width: 22px;
+    height: 22px;
+    background: #ed1b2f;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #222;
+}
+
+.live-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+
+    min-height: 125px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 4px 15px rgba(15, 35, 55, .05);
+}
+
+.live-status {
+    color: #e7192d;
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 13px;
+}
+
+.live-score {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.score {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.live-details {
+    color: var(--green-dark);
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/* ================= NEWS ================= */
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.news-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    padding: 23px;
+    min-height: 140px;
+}
+
+.news-card h3 {
+    font-size: 19px;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+.news-date {
+    color: #708197;
+    font-size: 14px;
+}
+
+/* ================= MOBILE MENU ================= */
+
+.mobile-menu {
+    display: none;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+
+    .nav {
+        gap: 17px;
+    }
+
+    .nav a {
+        font-size: 15px;
+    }
+
+    .matches,
+    .news-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-content {
+        padding: 40px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .header-inner {
+        min-height: 70px;
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+
+        border: 0;
+        background: transparent;
+
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .container {
+        width: calc(100% - 28px);
+        margin-top: 15px;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 430px;
+        border-radius: 20px;
+
+        background-position: 65% center;
+    }
+
+    .hero-content {
+        padding: 30px 24px;
+    }
+
+    .hero-label {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 17px;
+        line-height: 1.55;
+    }
+
+    .hero-links {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    /* SECTION */
+
+    .section {
+        margin-top: 32px;
+    }
+
+    .section-header {
+        margin-bottom: 15px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .section-link {
+        font-size: 14px;
+    }
+
+    /* MATCHES */
+
+    .matches {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .match-card {
+        padding: 20px;
+        min-height: 185px;
+    }
+
+    .league {
+        font-size: 15px;
+    }
+
+    .team-name {
+        font-size: 16px;
+    }
+
+    .match-time {
+        font-size: 16px;
+    }
+
+    .match-details {
+        font-size: 16px;
+    }
+
+    /* LIVE */
+
+    .live-card {
+        padding: 20px 12px;
+        min-height: 145px;
+    }
+
+    .live-score {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .score {
+        font-size: 29px;
+    }
+
+    .live-details {
+        font-size: 15px;
+    }
+
+    /* NEWS */
+
+    .news-list {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card {
+        min-height: 120px;
+    }
+}
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-content {
+        padding: 25px 20px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .live-score {
+        gap: 10px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================== -->
+<!-- HEADER -->
 
-<header>
+<header class="header">
 
-    <div class="logo">
-        MOSBET
+    <div class="header-inner">
+
+        <div class="logo">
+            MOS<span>BET</span>
+        </div>
+
+        <nav class="nav">
+
+            <a href="#">Ana Sayfa</a>
+            <a href="#">⚽ Maçlar</a>
+            <a href="#">▣ Canlı</a>
+            <a href="#">🏆 Haberler</a>
+            <a href="#">▥ Analizler</a>
+
+            <a href="#" class="about-btn">
+                Hakkımızda →
+            </a>
+
+        </nav>
+
+        <button class="mobile-menu">
+            ☰
+        </button>
+
     </div>
-
-    <nav>
-
-        <a href="https://cutt.ly/SeK7Tw7u">
-            Ana Sayfa
-        </a>
-
-        <a href=https://cutt.ly/SeK7Tw7u">
-            Maçlar
-        </a>
-
-        <a href=https://cutt.ly/SeK7Tw7u">
-            Canlı
-        </a>
-
-        <a href=https://cutt.ly/SeK7Tw7u">
-            Haberler
-        </a>
-
-        <a href=https://cutt.ly/SeK7Tw7u">
-            Analizler
-        </a>
-
-    </nav>
-
-    <a
-        href=https://cutt.ly/SeK7Tw7u"
-        class="login-button"
-    >
-        Hakkımızda
-    </a>
 
 </header>
 
 
-<!-- =========================
-     MAIN
-========================== -->
-
-<main>
-
+<main class="container">
 
     <!-- HERO -->
 
     <section class="hero">
 
-        <div>
+        <div class="hero-content">
 
-            <span class="badge">
-                MOSTBET SPOR
-            </span>
+            <div class="hero-label">
+                MOSBET SPOR
+            </div>
 
             <h1>
                 Spor dünyasının
-                <strong>merkezi</strong>
+                <span>merkezi</span>
             </h1>
 
             <p>
-                Futbol haberleri, maç programları,
-                canlı skorlar ve spor dünyasından
-                güncel gelişmeler tek platformda.
+                Futbol haberleri, maç programları, canlı skorlar
+                ve spor dünyasından güncel gelişmeler tek platformda.
             </p>
 
+            <div class="hero-links">
 
-            <div class="hero-buttons">
-
-                <a
-                    href=https://cutt.ly/SeK7Tw7u"
-                    class="hero-link"
-                >
-                    Maçlara Bak
+                <a href="#">
+                    Maçlara Bak →
                 </a>
 
-                <a
-                    href=https://cutt.ly/SeK7Tw7u"
-                    class="hero-link dark-button"
-                >
-                    Son Haberler
+                <a href="#">
+                    Son Haberler →
                 </a>
 
             </div>
@@ -127,20 +640,17 @@
     </section>
 
 
-
-    <!-- =========================
-         ÖNE ÇIKAN MAÇLAR
-    ========================== -->
+    <!-- FEATURED MATCHES -->
 
     <section class="section">
 
-        <div class="section-title">
+        <div class="section-header">
 
-            <h2>
+            <h2 class="section-title">
                 🔥 Öne Çıkan Maçlar
             </h2>
 
-            <a href=https://cutt.ly/SeK7Tw7u">
+            <a class="section-link" href="#">
                 Tüm maçlar →
             </a>
 
@@ -149,10 +659,9 @@
 
         <div class="matches">
 
-
             <!-- MATCH 1 -->
 
-            <div class="match-card">
+            <article class="match-card">
 
                 <div class="league">
                     ⚽ Premier League
@@ -161,57 +670,33 @@
                 <div class="teams">
 
                     <div>
-
-                        <div class="team-icon">
-                            M
-                        </div>
-
-                        <p>
-                            Manchester
-                        </p>
-
+                        <div class="team-circle">M</div>
+                        <div class="team-name">Manchester</div>
                     </div>
 
-
-                    <strong>
-                        VS
-                    </strong>
-
+                    <div class="vs">VS</div>
 
                     <div>
-
-                        <div class="team-icon">
-                            L
-                        </div>
-
-                        <p>
-                            Liverpool
-                        </p>
-
+                        <div class="team-circle">L</div>
+                        <div class="team-name">Liverpool</div>
                     </div>
 
                 </div>
-
 
                 <div class="match-time">
                     Bugün · 20:00
                 </div>
 
-
-                <a
-                    href=https://cutt.ly/SeK7Tw7u"
-                    class="match-details"
-                >
+                <a class="match-details" href="#">
                     Maç Detayları →
                 </a>
 
-            </div>
-
+            </article>
 
 
             <!-- MATCH 2 -->
 
-            <div class="match-card">
+            <article class="match-card">
 
                 <div class="league">
                     ⚽ La Liga
@@ -220,57 +705,33 @@
                 <div class="teams">
 
                     <div>
-
-                        <div class="team-icon">
-                            R
-                        </div>
-
-                        <p>
-                            Real Madrid
-                        </p>
-
+                        <div class="team-circle">R</div>
+                        <div class="team-name">Real Madrid</div>
                     </div>
 
-
-                    <strong>
-                        VS
-                    </strong>
-
+                    <div class="vs">VS</div>
 
                     <div>
-
-                        <div class="team-icon">
-                            B
-                        </div>
-
-                        <p>
-                            Barcelona
-                        </p>
-
+                        <div class="team-circle">B</div>
+                        <div class="team-name">Barcelona</div>
                     </div>
 
                 </div>
-
 
                 <div class="match-time">
                     Bugün · 22:00
                 </div>
 
-
-                <a
-                    href=https://cutt.ly/SeK7Tw7u"
-                    class="match-details"
-                >
+                <a class="match-details" href="#">
                     Maç Detayları →
                 </a>
 
-            </div>
-
+            </article>
 
 
             <!-- MATCH 3 -->
 
-            <div class="match-card">
+            <article class="match-card">
 
                 <div class="league">
                     ⚽ Süper Lig
@@ -279,72 +740,49 @@
                 <div class="teams">
 
                     <div>
-
-                        <div class="team-icon">
-                            G
-                        </div>
-
-                        <p>
-                            Galatasaray
-                        </p>
-
+                        <div class="team-circle">G</div>
+                        <div class="team-name">Galatasaray</div>
                     </div>
 
-
-                    <strong>
-                        VS
-                    </strong>
-
+                    <div class="vs">VS</div>
 
                     <div>
-
-                        <div class="team-icon">
-                            F
-                        </div>
-
-                        <p>
-                            Fenerbahçe
-                        </p>
-
+                        <div class="team-circle">F</div>
+                        <div class="team-name">Fenerbahçe</div>
                     </div>
 
                 </div>
-
 
                 <div class="match-time">
                     Yarın · 20:00
                 </div>
 
-
-                <a
-                    href=https://cutt.ly/SeK7Tw7u"
-                    class="match-details"
-                >
+                <a class="match-details" href="#">
                     Maç Detayları →
                 </a>
 
-            </div>
-
+            </article>
 
         </div>
 
     </section>
 
 
+    <!-- LIVE MATCHES -->
 
-    <!-- =========================
-         CANLI MAÇ
-    ========================== -->
+    <section class="section">
 
-    <section class="section live-section">
+        <div class="section-header">
 
-        <div class="section-title">
+            <h2 class="section-title">
 
-            <h2>
-                🔴 Canlı Maçlar
+                <span class="live-icon"></span>
+
+                Canlı Maçlar
+
             </h2>
 
-            <a href=https://cutt.ly/SeK7Tw7u">
+            <a class="section-link" href="#">
                 Tümünü gör →
             </a>
 
@@ -357,14 +795,13 @@
                 🔴 CANLI · 67'
             </div>
 
-
-            <div class="live-teams">
+            <div class="live-score">
 
                 <span>
                     Barcelona
                 </span>
 
-                <strong>
+                <strong class="score">
                     2 - 1
                 </strong>
 
@@ -374,11 +811,7 @@
 
             </div>
 
-
-            <a
-                href=https://cutt.ly/SeK7Tw7u"
-                class="live-details"
-            >
+            <a href="#" class="live-details">
                 Canlı maç detayları →
             </a>
 
@@ -387,324 +820,105 @@
     </section>
 
 
-
-    <!-- =========================
-         SON HABERLER
-    ========================== -->
+    <!-- NEWS -->
 
     <section class="section">
 
-        <div class="section-title">
+        <div class="section-header">
 
-            <h2>
+            <h2 class="section-title">
                 📰 Son Haberler
             </h2>
 
-            <a href=https://cutt.ly/SeK7Tw7u">
+            <a class="section-link" href="#">
                 Tüm haberler →
             </a>
 
         </div>
 
 
-        <div class="news">
-
-
-            <!-- NEWS 1 -->
+        <div class="news-list">
 
             <article class="news-card">
 
-                <div class="news-image">
-                    ⚽
-                </div>
+                <h3>
+                    Futbol dünyasından günün en önemli gelişmeleri
+                </h3>
 
-                <div>
-
-                    <span>
-                        Futbol
-                    </span>
-
-                    <h3>
-                        Haftanın önemli maçları belli oldu
-                    </h3>
-
-                    <p>
-                        Spor dünyasından son gelişmeler
-                        ve maç programları.
-                    </p>
-
-                    <a href=https://cutt.ly/SeK7Tw7u">
-                        Haberi Oku →
-                    </a>
-
+                <div class="news-date">
+                    Bugün · 18:30
                 </div>
 
             </article>
 
 
-
-            <!-- NEWS 2 -->
-
             <article class="news-card">
 
-                <div class="news-image">
-                    🏆
-                </div>
+                <h3>
+                    Takımların maç öncesi son durumları
+                </h3>
 
-                <div>
-
-                    <span>
-                        Şampiyonlar Ligi
-                    </span>
-
-                    <h3>
-                        Avrupa'da büyük mücadele
-                    </h3>
-
-                    <p>
-                        Avrupa futbolundan güncel
-                        gelişmeler ve karşılaşmalar.
-                    </p>
-
-                    <a href=https://cutt.ly/SeK7Tw7u">
-                        Haberi Oku →
-                    </a>
-
+                <div class="news-date">
+                    Bugün · 17:45
                 </div>
 
             </article>
 
 
-
-            <!-- NEWS 3 -->
-
             <article class="news-card">
 
-                <div class="news-image">
-                    🔥
-                </div>
+                <h3>
+                    Haftanın öne çıkan karşılaşmaları
+                </h3>
 
-                <div>
-
-                    <span>
-                        Analiz
-                    </span>
-
-                    <h3>
-                        Haftanın maç analizi
-                    </h3>
-
-                    <p>
-                        Takımların form durumları ve
-                        maç öncesi değerlendirmeler.
-                    </p>
-
-                    <a href=https://cutt.ly/SeK7Tw7u">
-                        Analizi Oku →
-                    </a>
-
+                <div class="news-date">
+                    Bugün · 16:20
                 </div>
 
             </article>
-
 
         </div>
 
     </section>
-
-
-
-    <!-- =========================
-         SPOR KATEGORİLERİ
-    ========================== -->
-
-    <section class="section">
-
-        <div class="section-title">
-
-            <h2>
-                🏆 Spor Kategorileri
-            </h2>
-
-        </div>
-
-
-        <div class="category-grid">
-
-
-            <a
-                href=https://cutt.ly/SeK7Tw7u"
-                class="category-card"
-            >
-
-                <span>
-                    ⚽
-                </span>
-
-                <h3>
-                    Futbol
-                </h3>
-
-                <p>
-                    Futbol dünyasından haberler
-                </p>
-
-            </a>
-
-
-
-            <a
-                href=https://cutt.ly/SeK7Tw7u"
-                class="category-card"
-            >
-
-                <span>
-                    🏀
-                </span>
-
-                <h3>
-                    Basketbol
-                </h3>
-
-                <p>
-                    Basketbol haberleri ve sonuçlar
-                </p>
-
-            </a>
-
-
-
-            <a
-                href=https://cutt.ly/SeK7Tw7u"
-                class="category-card"
-            >
-
-                <span>
-                    🎾
-                </span>
-
-                <h3>
-                    Tenis
-                </h3>
-
-                <p>
-                    Tenis dünyasından gelişmeler
-                </p>
-
-            </a>
-
-
-
-            <a
-                href=https://cutt.ly/SeK7Tw7u"
-                class="category-card"
-            >
-
-                <span>
-                    📊
-                </span>
-
-                <h3>
-                    Analizler
-                </h3>
-
-                <p>
-                    Maç ve takım analizleri
-                </p>
-
-            </a>
-
-
-        </div>
-
-    </section>
-
 
 </main>
 
 
+<script>
 
-<!-- =========================
-     FOOTER
-========================== -->
+/* Mobil menyu üçün sadə davranış */
 
-<footer>
+const menuButton = document.querySelector(".mobile-menu");
+const nav = document.querySelector(".nav");
 
-    <div class="footer-content">
+menuButton.addEventListener("click", function () {
 
+    if (nav.style.display === "flex") {
+        nav.style.display = "none";
+    } else {
 
-        <div>
+        nav.style.display = "flex";
 
-            <div class="logo">
-                MOSBET
-            </div>
+        nav.style.position = "absolute";
+        nav.style.top = "70px";
+        nav.style.left = "0";
+        nav.style.right = "0";
 
-            <p>
-                Spor haberleri, maç bilgileri,
-                canlı skorlar ve analizler.
-            </p>
+        nav.style.background = "#fff";
+        nav.style.padding = "20px";
 
-        </div>
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "stretch";
 
+        nav.style.gap = "18px";
 
-        <div>
+        nav.style.boxShadow =
+            "0 10px 25px rgba(0,0,0,.10)";
+    }
 
-            <h4>
-                Sayfalar
-            </h4>
+});
 
-            <a href=https://cutt.ly/SeK7Tw7u">
-                Ana Sayfa
-            </a>
-
-            <a href=https://cutt.ly/SeK7Tw7u">
-                Maçlar
-            </a>
-
-            <a href=https://cutt.ly/SeK7Tw7u">
-                Canlı
-            </a>
-
-            <a href=https://cutt.ly/SeK7Tw7u">
-                Haberler
-            </a>
-
-            <a href=https://cutt.ly/SeK7Tw7u">
-                Analizler
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Kurumsal
-            </h4>
-
-            <a href=https://cutt.ly/SeK7Tw7u">
-                Hakkımızda
-            </a>
-
-            <a href=https://cutt.ly/SeK7Tw7u">
-                İletişim
-            </a>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="copyright">
-
-        © 2022 Mostbet.
-        Tüm hakları saklıdır.
-
-    </div>
-
-</footer>
+</script>
 
 </body>
-
 </html>
