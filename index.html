@@ -1,1406 +1,1036 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mostbet bonusları, kampaniyalar, canlı matçlar və son idman xəbərləri.">
+  <title>Mostbet | Bonuslar, Xəbərlər və İdman</title>
 
-    <title>Mostbet | Bonuslar, Xəbərlər və İdman</title>
-    <meta name="description" content="Mostbet bonusları, idman xəbərləri və xüsusi təkliflər.">
+  <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="style.css">
+  <style>
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      margin-left: 12px;
+    }
 
-    <style>
-        .language-switcher {
-            display: flex;
-            align-items: center;
-            margin-left: 12px;
-        }
+    #languageSelect {
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      outline: none;
+    }
 
-        .language-switcher select {
-            appearance: none;
-            border: 1px solid rgba(255,255,255,.18);
-            border-radius: 8px;
-            background: #111;
-            color: #fff;
-            padding: 9px 30px 9px 10px;
-            font-weight: 700;
-            cursor: pointer;
-            outline: none;
-        }
+    #languageSelect option {
+      color: #000;
+      background: #fff;
+    }
 
-        .language-switcher select option {
-            background: #111;
-            color: #fff;
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0,0,0,0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-        @media (max-width: 768px) {
-            .language-switcher {
-                margin: 10px 0;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .language-switcher {
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="header">
-    <div class="header-inner">
+<header>
+  <div class="container">
+    <div class="logo">MOSTBET</div>
 
-        <a href="#" class="logo">
-            <span class="logo-dot"></span>
-            MOSTBET
-        </a>
+    <nav>
+      <a href="#bonuses" data-i18n="navBonus">Bonuslar</a>
+      <a href="#news" data-i18n="navNews">Xəbərlər</a>
+      <a href="#live" data-i18n="navLive">Canlı</a>
+      <a href="#about" data-i18n="navAbout">Haqqımızda</a>
+    </nav>
 
-        <nav class="nav" id="nav">
-            <a href="#bonuslar" data-i18n="navBonus">Bonuslar</a>
-            <a href="#xeberler" data-i18n="navNews">Xəbərlər</a>
-            <a href="#canli" data-i18n="navLive">Canlı</a>
-            <a href="#haqqimizda" data-i18n="navAbout">Haqqımızda</a>
-        </nav>
+    <div class="header-actions">
+      <a href="#bonuses" class="btn" data-i18n="headerButton">Bonuslara bax</a>
 
-        <a href="#bonuslar" class="header-btn">
-            <span data-i18n="headerBonus">Bonuslara bax</span>
-        </a>
+      <div class="language-switcher">
+        <select id="languageSelect" aria-label="Language">
+          <option value="az">AZ</option>
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
+          <option value="tr">TR</option>
+        </select>
+      </div>
 
-        <div class="language-switcher">
-            <label for="languageSelect" class="sr-only">Language</label>
-            <select id="languageSelect" aria-label="Language">
-                <option value="az">AZ</option>
-                <option value="en">EN</option>
-                <option value="ru">RU</option>
-                <option value="tr">TR</option>
-            </select>
-        </div>
-
-        <button class="mobile-menu" id="mobileMenu">
-            ☰
-        </button>
-
+      <button class="menu-btn" aria-label="Menu">☰</button>
     </div>
+  </div>
 </header>
+
 
 <main>
 
-<section class="hero">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
 
-    <div class="hero-background"></div>
+        <span class="label" data-i18n="heroLabel">
+          MOSTBET XÜSUSİ TƏKLİFLƏR
+        </span>
 
-    <div class="container hero-inner">
+        <h1 data-i18n="heroTitle">
+          Ən yaxşı bonusları<br>
+          bir yerdə kəşf et
+        </h1>
 
-        <div class="hero-content">
+        <p data-i18n="heroText">
+          Mostbet bonusları, xüsusi kampaniyalar, canlı matçlar və idman xəbərləri ilə ən son təkliflərdən xəbərdar ol.
+        </p>
 
-            <div class="hero-label" data-i18n="heroLabel">
-                MOSTBET XÜSUSİ TƏKLİFLƏR
-            </div>
+        <div class="hero-buttons">
+          <a href="#bonuses" class="btn" data-i18n="heroBonusButton">
+            Bonusları gör
+          </a>
 
-            <h1 data-i18n="heroTitle">
-                Ən yaxşı bonusları<br>
-                <span>bir yerdə kəşf et</span>
-            </h1>
-
-            <p data-i18n="heroText">
-                Mostbet bonusları, xüsusi kampaniyalar,
-                casino təklifləri və ən son idman xəbərləri.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#bonuslar" class="main-btn">
-                    <span data-i18n="viewBonuses">Bonusları gör</span>
-                    <span>→</span>
-                </a>
-
-                <a href="#xeberler" class="second-btn">
-                    <span data-i18n="latestNews">Son xəbərlər</span>
-                </a>
-
-            </div>
-
+          <a href="#news" class="btn btn-outline" data-i18n="heroNewsButton">
+            Son xəbərlər
+          </a>
         </div>
 
-        <div class="hero-card">
+      </div>
 
-            <div class="hero-card-top">
-                <span>🔥</span>
-                <small data-i18n="specialOffer">XÜSUSİ TƏKLİF</small>
-            </div>
+      <div class="hero-card">
+        <span class="label" data-i18n="offerLabel">
+          XÜSUSİ TƏKLİF
+        </span>
 
-            <strong data-i18n="mostbetBonuses">Mostbet Bonusları</strong>
+        <h3 data-i18n="offerTitle">
+          Mostbet Bonusları
+        </h3>
 
-            <p data-i18n="heroCardText">
-                Günün ən maraqlı bonus və
-                kampaniyalarını kəşf et.
-            </p>
+        <p data-i18n="offerText">
+          Sizin üçün hazırlanmış xüsusi bonus və kampaniyaları kəşf edin.
+        </p>
 
-            <a href="#bonuslar">
-                <span data-i18n="viewOffers">Təkliflərə bax →</span>
-            </a>
-
-        </div>
-
+        <a href="https://cutt.ly/SeK7Tw7u" data-i18n="offerButton">
+          Təkliflərə bax →
+        </a>
+      </div>
     </div>
+  </section>
 
-</section>
 
-
-<section class="section" id="bonuslar">
-
+  <!-- BONUSES -->
+  <section id="bonuses" class="section">
     <div class="container">
 
-        <div class="section-header">
+      <div class="section-header">
+        <div>
+          <span class="label" data-i18n="bonusLabel">
+            XÜSUSİ TƏKLİFLƏR
+          </span>
 
-            <div>
-                <div class="section-label" data-i18n="specialOffers">
-                    XÜSUSİ TƏKLİFLƏR
-                </div>
-
-                <h2 class="section-title">
-                    <span data-i18n="mostbetBonuses">Mostbet Bonusları</span>
-                </h2>
-            </div>
-
-            <a href="#bonuslar" class="section-link">
-                <span data-i18n="viewAll">Hamısına bax →</span>
-            </a>
-
+          <h2 data-i18n="bonusTitle">
+            Mostbet Bonusları
+          </h2>
         </div>
 
+        <a href="https://cutt.ly/SeK7Tw7u" data-i18n="allButton">
+          Hamısına bax →
+        </a>
+      </div>
 
-        <div class="bonus-grid">
 
-            <a href="https://cutt.ly/SeK7Tw7u"
-               target="_blank"
-               rel="noopener"
-               class="bonus-card">
+      <div class="cards">
 
-                <div class="bonus-icon">
-                    🎁
-                </div>
+        <article class="card">
+          <div class="card-content">
+            <h3 data-i18n="bonus1Title">
+              %200 Depozit Bonusu
+            </h3>
 
-                <div class="bonus-content">
+            <p data-i18n="bonus1Text">
+              İlk yatırımınıza xüsusi bonus fürsətini kəşf edin.
+            </p>
 
-                    <span class="bonus-label" data-i18n="mostbetBonus">
-                        MOSTBET BONUS
-                    </span>
-
-                    <h3>%200 Depozit Bonusu</h3>
-
-                    <p data-i18n="bonus1Text">
-                        İlk yatırımınıza xüsusi bonus
-                        fürsətini kəşf edin.
-                    </p>
-
-                    <span class="bonus-link" data-i18n="seeBonus">
-                        Bonusu gör →
-                    </span>
-
-                </div>
-
+            <a href="https://cutt.ly/SeK7Tw7u" data-i18n="bonus1Button">
+              Bonusu gör →
             </a>
+          </div>
+        </article>
 
 
-            <a href="https://cutt.ly/SeK7Tw7u"
-               target="_blank"
-               rel="noopener"
-               class="bonus-card">
+        <article class="card">
+          <div class="card-content">
+            <h3 data-i18n="bonus2Title">
+              100 Free Spins
+            </h3>
 
-                <div class="bonus-icon">
-                    🎰
-                </div>
+            <p data-i18n="bonus2Text">
+              Seçilmiş casino oyunlarında xüsusi free spin fürsəti.
+            </p>
 
-                <div class="bonus-content">
-
-                    <span class="bonus-label">
-                        CASINO
-                    </span>
-
-                    <h3>100 Free Spins</h3>
-
-                    <p data-i18n="bonus2Text">
-                        Seçilmiş casino oyunlarında
-                        xüsusi free spin fürsəti.
-                    </p>
-
-                    <span class="bonus-link" data-i18n="seeOffer">
-                        Təklifi gör →
-                    </span>
-
-                </div>
-
+            <a href="https://cutt.ly/SeK7Tw7u" data-i18n="bonus2Button">
+              Təklifi gör →
             </a>
+          </div>
+        </article>
 
 
-            <a href="https://cutt.ly/SeK7Tw7u"
-               target="_blank"
-               rel="noopener"
-               class="bonus-card">
+        <article class="card">
+          <div class="card-content">
+            <h3 data-i18n="bonus3Title">
+              VIP Bonus
+            </h3>
 
-                <div class="bonus-icon">
-                    ⭐
-                </div>
+            <p data-i18n="bonus3Text">
+              Xüsusi istifadəçilər üçün hazırlanmış təkliflər.
+            </p>
 
-                <div class="bonus-content">
-
-                    <span class="bonus-label" data-i18n="specialChance">
-                        XÜSUSİ FÜRSƏT
-                    </span>
-
-                    <h3>VIP Bonus</h3>
-
-                    <p data-i18n="bonus3Text">
-                        Xüsusi istifadəçilər üçün
-                        hazırlanmış təkliflər.
-                    </p>
-
-                    <span class="bonus-link" data-i18n="details">
-                        Ətraflı bax →
-                    </span>
-
-                </div>
-
+            <a href="https://cutt.ly/SeK7Tw7u" data-i18n="bonus3Button">
+              Ətraflı bax →
             </a>
+          </div>
+        </article>
 
 
-            <a href="https://cutt.ly/SeK7Tw7u"
-               target="_blank"
-               rel="noopener"
-               class="bonus-card">
+        <article class="card">
+          <div class="card-content">
+            <h3 data-i18n="bonus4Title">
+              İdman Bonusları
+            </h3>
 
-                <div class="bonus-icon">
-                    ⚽
-                </div>
+            <p data-i18n="bonus4Text">
+              İdman mərcləri üçün xüsusi kampaniya və təkliflər.
+            </p>
 
-                <div class="bonus-content">
-
-                    <span class="bonus-label" data-i18n="sport">
-                        İDMAN
-                    </span>
-
-                    <h3>İdman Bonusları</h3>
-
-                    <p data-i18n="bonus4Text">
-                        İdman mərcləri üçün xüsusi
-                        kampaniya və təkliflər.
-                    </p>
-
-                    <span class="bonus-link" data-i18n="seeOffer">
-                        Təklifi gör →
-                    </span>
-
-                </div>
-
+            <a href="https://cutt.ly/SeK7Tw7u" data-i18n="bonus4Button">
+              Təklifi gör →
             </a>
+          </div>
+        </article>
 
 
-            <a href="https://cutt.ly/SeK7Tw7u"
-               target="_blank"
-               rel="noopener"
-               class="bonus-card">
+        <article class="card">
+          <div class="card-content">
+            <h3 data-i18n="bonus5Title">
+              Xüsusi Premium Təklif
+            </h3>
 
-                <div class="bonus-icon">
-                    💎
-                </div>
+            <p data-i18n="bonus5Text">
+              Seçilmiş istifadəçilər üçün xüsusi fürsətlər.
+            </p>
 
-                <div class="bonus-content">
-
-                    <span class="bonus-label" data-i18n="premium">
-                        PREMIUM
-                    </span>
-
-                    <h3>Xüsusi Premium Təklif</h3>
-
-                    <p data-i18n="bonus5Text">
-                        Seçilmiş istifadəçilər üçün
-                        xüsusi fürsətlər.
-                    </p>
-
-                    <span class="bonus-link" data-i18n="details">
-                        Ətraflı bax →
-                    </span>
-
-                </div>
-
+            <a href="https://cutt.ly/SeK7Tw7u" data-i18n="bonus5Button">
+              Ətraflı bax →
             </a>
+          </div>
+        </article>
 
 
-            <a href="https://cutt.ly/SeK7Tw7u"
-               target="_blank"
-               rel="noopener"
-               class="bonus-card">
+        <article class="card">
+          <div class="card-content">
+            <h3 data-i18n="bonus6Title">
+              Günün Xüsusi Bonusu
+            </h3>
 
-                <div class="bonus-icon">
-                    🔥
-                </div>
+            <p data-i18n="bonus6Text">
+              Günün ən maraqlı kampaniyasını indi kəşf edin.
+            </p>
 
-                <div class="bonus-content">
-
-                    <span class="bonus-label" data-i18n="new">
-                        YENİ
-                    </span>
-
-                    <h3 data-i18n="bonus6Title">
-                        Günün Xüsusi Bonusu
-                    </h3>
-
-                    <p data-i18n="bonus6Text">
-                        Günün ən maraqlı kampaniyasını
-                        indi kəşf edin.
-                    </p>
-
-                    <span class="bonus-link" data-i18n="seeBonus">
-                        Bonusu gör →
-                    </span>
-
-                </div>
-
+            <a href="https://cutt.ly/SeK7Tw7u" data-i18n="bonus6Button">
+              Bonusu gör →
             </a>
+          </div>
+        </article>
 
-        </div>
-
+      </div>
     </div>
+  </section>
 
-</section>
 
-
-<section class="section live-section" id="canli">
-
+  <!-- LIVE -->
+  <section id="live" class="section live-section">
     <div class="container">
 
-        <div class="section-header">
+      <div class="section-header">
+        <div>
+          <span class="label" data-i18n="liveLabel">
+            CANLI
+          </span>
 
-            <div>
+          <h2 data-i18n="liveTitle">
+            Canlı Matçlar
+          </h2>
+        </div>
+      </div>
 
-                <div class="section-label" data-i18n="live">
-                    CANLI
-                </div>
 
-                <h2 class="section-title" data-i18n="liveMatches">
-                    Canlı Matçlar
-                </h2>
+      <div class="match-card">
 
-            </div>
+        <div class="match-info">
+          <span class="league" data-i18n="league">
+            UEFA CHAMPIONS LEAGUE
+          </span>
 
-            <span class="live-indicator">
-                <span></span>
-                <span data-i18n="live">CANLI</span>
+          <div class="teams">
+            <strong>Arsenal</strong>
+            <span>vs</span>
+            <strong>Milan</strong>
+          </div>
+        </div>
+
+        <div class="score">
+          <strong>2:1</strong>
+          <span>67'</span>
+        </div>
+
+        <div class="match-action">
+          <span class="live-status" data-i18n="liveStatus">
+            LIVE
+          </span>
+
+          <a href="https://cutt.ly/SeK7Tw7u" data-i18n="liveButton">
+            Matça bax
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- NEWS -->
+  <section id="news" class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <div>
+          <span class="label" data-i18n="newsLabel">
+            XƏBƏRLƏR
+          </span>
+
+          <h2 data-i18n="newsTitle">
+            Son Xəbərlər
+          </h2>
+        </div>
+
+        <a href="#news" data-i18n="newsAll">
+          Bütün xəbərlər →
+        </a>
+      </div>
+
+
+      <div class="news-grid">
+
+        <article class="news-card">
+          <div class="news-content">
+
+            <span class="date" data-i18n="today">
+              Bu gün
             </span>
 
-        </div>
+            <h3 data-i18n="news1Title">
+              Mostbet yeni bonus kampaniyasını təqdim etdi
+            </h3>
+
+            <p data-i18n="news1Text">
+              Yeni xüsusi təkliflər və bonus imkanları artıq aktivdir.
+            </p>
+
+          </div>
+        </article>
 
 
-        <div class="live-card">
+        <article class="news-card">
+          <div class="news-content">
 
-            <div class="live-left">
+            <span class="date" data-i18n="today">
+              Bu gün
+            </span>
 
-                <div class="league">
-                    UEFA CHAMPIONS LEAGUE
-                </div>
+            <h3 data-i18n="news2Title">
+              Yeni casino bonusları artıq aktivdir
+            </h3>
 
-                <div class="live-teams">
+            <p data-i18n="news2Text">
+              Seçilmiş oyunlarda yeni bonus imkanlarını kəşf edin.
+            </p>
 
-                    <div class="team">
-
-                        <div class="team-circle">
-                            A
-                        </div>
-
-                        <strong>
-                            Arsenal
-                        </strong>
-
-                    </div>
-
-                    <div class="live-score-box">
-
-                        <span>LIVE</span>
-
-                        <strong>
-                            2 : 1
-                        </strong>
-
-                        <small>
-                            67'
-                        </small>
-
-                    </div>
-
-                    <div class="team">
-
-                        <div class="team-circle">
-                            M
-                        </div>
-
-                        <strong>
-                            Milan
-                        </strong>
-
-                    </div>
-
-                </div>
-
-            </div>
+          </div>
+        </article>
 
 
-            <div class="live-right">
+        <article class="news-card">
+          <div class="news-content">
 
-                <div>
+            <span class="date" data-i18n="yesterday">
+              Dünən
+            </span>
 
-                    <span class="live-status">
-                        ● <span data-i18n="live">CANLI</span>
-                    </span>
+            <h3 data-i18n="news3Title">
+              Günün ən vacib idman xəbərləri
+            </h3>
 
-                    <strong data-i18n="watchMatch">
-                        Matça bax
-                    </strong>
+            <p data-i18n="news3Text">
+              İdman dünyasından ən son xəbərləri izləyin.
+            </p>
 
-                </div>
+          </div>
+        </article>
 
-                <a href="#" class="arrow-btn">
-                    →
-                </a>
 
-            </div>
+        <article class="news-card">
+          <div class="news-content">
 
-        </div>
+            <span class="date" data-i18n="yesterday">
+              Dünən
+            </span>
+
+            <h3 data-i18n="news4Title">
+              Həftənin xüsusi bonus təklifləri
+            </h3>
+
+            <p data-i18n="news4Text">
+              Bu həftənin ən maraqlı bonus və kampaniyaları.
+            </p>
+
+          </div>
+        </article>
+
+      </div>
 
     </div>
+  </section>
 
-</section>
 
-
-<section class="section" id="xeberler">
-
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
     <div class="container">
 
-        <div class="section-header">
+      <div class="about-content">
 
-            <div>
+        <span class="label">
+          MOSTBET
+        </span>
 
-                <div class="section-label" data-i18n="news">
-                    XƏBƏRLƏR
-                </div>
+        <h2 data-i18n="aboutTitle">
+          Bonuslar və idman xəbərləri bir yerdə
+        </h2>
 
-                <h2 class="section-title" data-i18n="latestNewsTitle">
-                    Son Xəbərlər
-                </h2>
+        <p data-i18n="aboutText">
+          Mostbet-in ən son bonuslarını, kampaniyalarını, canlı matçlarını və idman xəbərlərini bir platformada kəşf edin.
+        </p>
 
-            </div>
+        <a href="#bonuses" class="btn" data-i18n="aboutButton">
+          Bonuslara bax →
+        </a>
 
-            <a href="#xeberler" class="section-link">
-                <span data-i18n="allNews">Bütün xəbərlər →</span>
-            </a>
-
-        </div>
-
-
-        <div class="news-grid">
-
-
-            <a href="https://cutt.ly/SeK7Tw7u"
-               target="_blank"
-               rel="noopener"
-               class="news-card">
-
-                <div class="news-top">
-
-                    <span class="news-category">
-                        MOSTBET
-                    </span>
-
-                    <span class="news-date" data-i18n="today">
-                        Bu gün
-                    </span>
-
-                </div>
-
-                <h3 data-i18n="news1Title">
-                    Mostbet yeni bonus kampaniyasını təqdim etdi
-                </h3>
-
-                <p data-i18n="news1Text">
-                    Ən son kampaniya və xüsusi təkliflər
-                    haqqında məlumat əldə edin.
-                </p>
-
-                <span class="read-more" data-i18n="readNews">
-                    Xəbəri oxu →
-                </span>
-
-            </a>
-
-
-            <a href="https://cutt.ly/SeK7Tw7u"
-               target="_blank"
-               rel="noopener"
-               class="news-card">
-
-                <div class="news-top">
-
-                    <span class="news-category">
-                        CASINO
-                    </span>
-
-                    <span class="news-date" data-i18n="today">
-                        Bu gün
-                    </span>
-
-                </div>
-
-                <h3 data-i18n="news2Title">
-                    Yeni casino bonusları artıq aktivdir
-                </h3>
-
-                <p data-i18n="news2Text">
-                    Casino dünyasındakı ən son bonus və
-                    kampaniyalara nəzər salın.
-                </p>
-
-                <span class="read-more" data-i18n="readNews">
-                    Xəbəri oxu →
-                </span>
-
-            </a>
-
-
-            <a href="https://cutt.ly/SeK7Tw7u"
-               target="_blank"
-               rel="noopener"
-               class="news-card">
-
-                <div class="news-top">
-
-                    <span class="news-category" data-i18n="sport">
-                        İDMAN
-                    </span>
-
-                    <span class="news-date" data-i18n="yesterday">
-                        Dünən
-                    </span>
-
-                </div>
-
-                <h3 data-i18n="news3Title">
-                    Günün ən vacib idman xəbərləri
-                </h3>
-
-                <p data-i18n="news3Text">
-                    Futbol və digər idman növlərindən
-                    ən son xəbərlər.
-                </p>
-
-                <span class="read-more" data-i18n="readNews">
-                    Xəbəri oxu →
-                </span>
-
-            </a>
-
-
-            <a href="https://cutt.ly/SeK7Tw7u"
-               target="_blank"
-               rel="noopener"
-               class="news-card">
-
-                <div class="news-top">
-
-                    <span class="news-category">
-                        BONUS
-                    </span>
-
-                    <span class="news-date" data-i18n="yesterday">
-                        Dünən
-                    </span>
-
-                </div>
-
-                <h3 data-i18n="news4Title">
-                    Həftənin xüsusi bonus təklifləri
-                </h3>
-
-                <p data-i18n="news4Text">
-                    Bu həftənin seçilmiş bonus və
-                    xüsusi fürsətlərini kəşf edin.
-                </p>
-
-                <span class="read-more" data-i18n="details">
-                    Ətraflı oxu →
-                </span>
-
-            </a>
-
-        </div>
+      </div>
 
     </div>
-
-</section>
-
-
-<section class="about-section" id="haqqimizda">
-
-    <div class="container">
-
-        <div class="about-box">
-
-            <div>
-
-                <div class="section-label">
-                    MOSTBET
-                </div>
-
-                <h2 data-i18n="aboutTitle">
-                    Bonuslar və idman xəbərləri
-                    bir yerdə
-                </h2>
-
-                <p data-i18n="aboutText">
-                    Ən son bonus təkliflərini, casino
-                    kampaniyalarını və idman xəbərlərini
-                    rahat şəkildə izləyin.
-                </p>
-
-            </div>
-
-            <a href="#bonuslar" class="main-btn">
-                <span data-i18n="viewBonuses">Bonuslara bax</span> →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
+  </section>
 
 </main>
 
 
-<footer class="footer">
+<!-- FOOTER -->
+<footer>
+  <div class="container">
 
-    <div class="container footer-inner">
+    <div class="footer-content">
 
-        <div class="footer-logo">
-            <span class="logo-dot"></span>
-            MOSTBET
-        </div>
+      <div class="logo">
+        MOSTBET
+      </div>
 
-        <div class="footer-links">
-
-            <a href="#bonuslar">
-                <span data-i18n="navBonus">Bonuslar</span>
-            </a>
-
-            <a href="#xeberler">
-                <span data-i18n="navNews">Xəbərlər</span>
-            </a>
-
-            <a href="#canli">
-                <span data-i18n="navLive">Canlı</span>
-            </a>
-
-            <a href="#haqqimizda">
-                <span data-i18n="navAbout">Haqqımızda</span>
-            </a>
-
-        </div>
-
-        <div class="copyright">
-            © 2026 Mostbet.
-            <span data-i18n="copyright">Bütün hüquqlar qorunur.</span>
-        </div>
+      <div class="footer-nav">
+        <a href="#bonuses" data-i18n="navBonus">Bonuslar</a>
+        <a href="#news" data-i18n="navNews">Xəbərlər</a>
+        <a href="#live" data-i18n="navLive">Canlı</a>
+        <a href="#about" data-i18n="navAbout">Haqqımızda</a>
+      </div>
 
     </div>
 
+    <div class="footer-bottom">
+      © 2026 Mostbet.
+      <span data-i18n="footerRights">Bütün hüquqlar qorunur.</span>
+    </div>
+
+  </div>
 </footer>
 
 
 <script>
+  /* =========================================
+     MOBİL MENYU
+  ========================================= */
 
-const mobileMenu = document.getElementById("mobileMenu");
-const nav = document.getElementById("nav");
+  const menuButton = document.querySelector(".menu-btn");
+  const nav = document.querySelector("nav");
 
-mobileMenu.addEventListener("click", function () {
-    nav.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav a").forEach(function(link) {
-
-    link.addEventListener("click", function() {
-        nav.classList.remove("active");
+  if (menuButton && nav) {
+    menuButton.addEventListener("click", () => {
+      nav.classList.toggle("active");
     });
+  }
 
-});
 
+  /* =========================================
+     4 DİL
+     AZ / EN / RU / TR
+  ========================================= */
 
-const translations = {
+  const translations = {
 
     az: {
+      metaDescription: "Mostbet bonusları, kampaniyalar, canlı matçlar və son idman xəbərləri.",
+      title: "Mostbet | Bonuslar, Xəbərlər və İdman",
 
-        pageTitle: "Mostbet | Bonuslar, Xəbərlər və İdman",
-        description: "Mostbet bonusları, idman xəbərləri və xüsusi təkliflər.",
+      navBonus: "Bonuslar",
+      navNews: "Xəbərlər",
+      navLive: "Canlı",
+      navAbout: "Haqqımızda",
+      headerButton: "Bonuslara bax",
 
-        headerBonus: "Bonuslara bax",
+      heroLabel: "MOSTBET XÜSUSİ TƏKLİFLƏR",
+      heroTitle: "Ən yaxşı bonusları<br>bir yerdə kəşf et",
+      heroText: "Mostbet bonusları, xüsusi kampaniyalar, canlı matçlar və idman xəbərləri ilə ən son təkliflərdən xəbərdar ol.",
+      heroBonusButton: "Bonusları gör",
+      heroNewsButton: "Son xəbərlər",
 
-        navBonus: "Bonuslar",
-        navNews: "Xəbərlər",
-        navLive: "Canlı",
-        navAbout: "Haqqımızda",
+      offerLabel: "XÜSUSİ TƏKLİF",
+      offerTitle: "Mostbet Bonusları",
+      offerText: "Sizin üçün hazırlanmış xüsusi bonus və kampaniyaları kəşf edin.",
+      offerButton: "Təkliflərə bax →",
 
-        heroLabel: "MOSTBET XÜSUSİ TƏKLİFLƏR",
+      bonusLabel: "XÜSUSİ TƏKLİFLƏR",
+      bonusTitle: "Mostbet Bonusları",
+      allButton: "Hamısına bax →",
 
-        heroTitle:
-            "Ən yaxşı bonusları<br><span>bir yerdə kəşf et</span>",
+      bonus1Title: "%200 Depozit Bonusu",
+      bonus1Text: "İlk yatırımınıza xüsusi bonus fürsətini kəşf edin.",
+      bonus1Button: "Bonusu gör →",
 
-        heroText:
-            "Mostbet bonusları, xüsusi kampaniyalar, casino təklifləri və ən son idman xəbərləri.",
+      bonus2Title: "100 Free Spins",
+      bonus2Text: "Seçilmiş casino oyunlarında xüsusi free spin fürsəti.",
+      bonus2Button: "Təklifi gör →",
 
-        viewBonuses: "Bonusları gör",
-        latestNews: "Son xəbərlər",
+      bonus3Title: "VIP Bonus",
+      bonus3Text: "Xüsusi istifadəçilər üçün hazırlanmış təkliflər.",
+      bonus3Button: "Ətraflı bax →",
 
-        specialOffer: "XÜSUSİ TƏKLİF",
-        mostbetBonuses: "Mostbet Bonusları",
+      bonus4Title: "İdman Bonusları",
+      bonus4Text: "İdman mərcləri üçün xüsusi kampaniya və təkliflər.",
+      bonus4Button: "Təklifi gör →",
 
-        heroCardText:
-            "Günün ən maraqlı bonus və kampaniyalarını kəşf et.",
+      bonus5Title: "Xüsusi Premium Təklif",
+      bonus5Text: "Seçilmiş istifadəçilər üçün xüsusi fürsətlər.",
+      bonus5Button: "Ətraflı bax →",
 
-        viewOffers: "Təkliflərə bax →",
+      bonus6Title: "Günün Xüsusi Bonusu",
+      bonus6Text: "Günün ən maraqlı kampaniyasını indi kəşf edin.",
+      bonus6Button: "Bonusu gör →",
 
-        specialOffers: "XÜSUSİ TƏKLİFLƏR",
-        viewAll: "Hamısına bax →",
+      liveLabel: "CANLI",
+      liveTitle: "Canlı Matçlar",
+      league: "UEFA CHAMPIONS LEAGUE",
+      liveStatus: "CANLI",
+      liveButton: "Matça bax",
 
-        mostbetBonus: "MOSTBET BONUS",
+      newsLabel: "XƏBƏRLƏR",
+      newsTitle: "Son Xəbərlər",
+      newsAll: "Bütün xəbərlər →",
 
-        bonus1Text:
-            "İlk yatırımınıza xüsusi bonus fürsətini kəşf edin.",
+      news1Title: "Mostbet yeni bonus kampaniyasını təqdim etdi",
+      news1Text: "Yeni xüsusi təkliflər və bonus imkanları artıq aktivdir.",
 
-        seeBonus: "Bonusu gör →",
+      news2Title: "Yeni casino bonusları artıq aktivdir",
+      news2Text: "Seçilmiş oyunlarda yeni bonus imkanlarını kəşf edin.",
 
-        bonus2Text:
-            "Seçilmiş casino oyunlarında xüsusi free spin fürsəti.",
+      news3Title: "Günün ən vacib idman xəbərləri",
+      news3Text: "İdman dünyasından ən son xəbərləri izləyin.",
 
-        seeOffer: "Təklifi gör →",
+      news4Title: "Həftənin xüsusi bonus təklifləri",
+      news4Text: "Bu həftənin ən maraqlı bonus və kampaniyaları.",
 
-        specialChance: "XÜSUSİ FÜRSƏT",
+      today: "Bu gün",
+      yesterday: "Dünən",
 
-        bonus3Text:
-            "Xüsusi istifadəçilər üçün hazırlanmış təkliflər.",
+      aboutTitle: "Bonuslar və idman xəbərləri bir yerdə",
+      aboutText: "Mostbet-in ən son bonuslarını, kampaniyalarını, canlı matçlarını və idman xəbərlərini bir platformada kəşf edin.",
+      aboutButton: "Bonuslara bax →",
 
-        details: "Ətraflı bax →",
-
-        sport: "İDMAN",
-
-        bonus4Text:
-            "İdman mərcləri üçün xüsusi kampaniya və təkliflər.",
-
-        premium: "PREMIUM",
-
-        bonus5Text:
-            "Seçilmiş istifadəçilər üçün xüsusi fürsətlər.",
-
-        new: "YENİ",
-
-        bonus6Title:
-            "Günün Xüsusi Bonusu",
-
-        bonus6Text:
-            "Günün ən maraqlı kampaniyasını indi kəşf edin.",
-
-        live: "CANLI",
-        liveMatches: "Canlı Matçlar",
-        watchMatch: "Matça bax",
-
-        news: "XƏBƏRLƏR",
-        latestNewsTitle: "Son Xəbərlər",
-        allNews: "Bütün xəbərlər →",
-
-        today: "Bu gün",
-        yesterday: "Dünən",
-
-        news1Title:
-            "Mostbet yeni bonus kampaniyasını təqdim etdi",
-
-        news1Text:
-            "Ən son kampaniya və xüsusi təkliflər haqqında məlumat əldə edin.",
-
-        readNews:
-            "Xəbəri oxu →",
-
-        news2Title:
-            "Yeni casino bonusları artıq aktivdir",
-
-        news2Text:
-            "Casino dünyasındakı ən son bonus və kampaniyalara nəzər salın.",
-
-        news3Title:
-            "Günün ən vacib idman xəbərləri",
-
-        news3Text:
-            "Futbol və digər idman növlərindən ən son xəbərlər.",
-
-        news4Title:
-            "Həftənin xüsusi bonus təklifləri",
-
-        news4Text:
-            "Bu həftənin seçilmiş bonus və xüsusi fürsətlərini kəşf edin.",
-
-        aboutTitle:
-            "Bonuslar və idman xəbərləri bir yerdə",
-
-        aboutText:
-            "Ən son bonus təkliflərini, casino kampaniyalarını və idman xəbərlərini rahat şəkildə izləyin.",
-
-        copyright:
-            "Bütün hüquqlar qorunur."
+      footerRights: "Bütün hüquqlar qorunur."
     },
 
 
     en: {
+      metaDescription: "Mostbet bonuses, promotions, live matches and the latest sports news.",
+      title: "Mostbet | Bonuses, News & Sports",
 
-        pageTitle: "Mostbet | Bonuses, News & Sports",
+      navBonus: "Bonuses",
+      navNews: "News",
+      navLive: "Live",
+      navAbout: "About",
+      headerButton: "View bonuses",
 
-        description:
-            "Mostbet bonuses, sports news and special offers.",
+      heroLabel: "MOSTBET SPECIAL OFFERS",
+      heroTitle: "Discover the best bonuses<br>all in one place",
+      heroText: "Stay up to date with Mostbet bonuses, special promotions, live matches and the latest sports news.",
+      heroBonusButton: "View bonuses",
+      heroNewsButton: "Latest news",
 
-        headerBonus: "View bonuses",
+      offerLabel: "SPECIAL OFFER",
+      offerTitle: "Mostbet Bonuses",
+      offerText: "Discover special bonuses and promotions prepared for you.",
+      offerButton: "View offers →",
 
-        navBonus: "Bonuses",
-        navNews: "News",
-        navLive: "Live",
-        navAbout: "About Us",
+      bonusLabel: "SPECIAL OFFERS",
+      bonusTitle: "Mostbet Bonuses",
+      allButton: "View all →",
 
-        heroLabel:
-            "MOSTBET SPECIAL OFFERS",
+      bonus1Title: "200% Deposit Bonus",
+      bonus1Text: "Discover a special bonus opportunity for your first deposit.",
+      bonus1Button: "View bonus →",
 
-        heroTitle:
-            "Discover the best bonuses<br><span>all in one place</span>",
+      bonus2Title: "100 Free Spins",
+      bonus2Text: "Special free spin opportunities on selected casino games.",
+      bonus2Button: "View offer →",
 
-        heroText:
-            "Mostbet bonuses, special campaigns, casino offers and the latest sports news.",
+      bonus3Title: "VIP Bonus",
+      bonus3Text: "Exclusive offers prepared for selected users.",
+      bonus3Button: "Learn more →",
 
-        viewBonuses: "View bonuses",
-        latestNews: "Latest news",
+      bonus4Title: "Sports Bonuses",
+      bonus4Text: "Special campaigns and offers for sports betting.",
+      bonus4Button: "View offer →",
 
-        specialOffer: "SPECIAL OFFER",
-        mostbetBonuses: "Mostbet Bonuses",
+      bonus5Title: "Special Premium Offer",
+      bonus5Text: "Exclusive opportunities for selected users.",
+      bonus5Button: "Learn more →",
 
-        heroCardText:
-            "Discover the most exciting bonuses and campaigns of the day.",
+      bonus6Title: "Special Bonus of the Day",
+      bonus6Text: "Discover today's most exciting campaign now.",
+      bonus6Button: "View bonus →",
 
-        viewOffers:
-            "View offers →",
+      liveLabel: "LIVE",
+      liveTitle: "Live Matches",
+      league: "UEFA CHAMPIONS LEAGUE",
+      liveStatus: "LIVE",
+      liveButton: "Watch match",
 
-        specialOffers:
-            "SPECIAL OFFERS",
+      newsLabel: "NEWS",
+      newsTitle: "Latest News",
+      newsAll: "All news →",
 
-        viewAll:
-            "View all →",
+      news1Title: "Mostbet launches a new bonus campaign",
+      news1Text: "New special offers and bonus opportunities are now active.",
 
-        mostbetBonus:
-            "MOSTBET BONUS",
+      news2Title: "New casino bonuses are now active",
+      news2Text: "Discover new bonus opportunities on selected games.",
 
-        bonus1Text:
-            "Discover a special bonus opportunity for your first deposit.",
+      news3Title: "Today's most important sports news",
+      news3Text: "Follow the latest news from the world of sports.",
 
-        seeBonus:
-            "See bonus →",
+      news4Title: "Special bonus offers of the week",
+      news4Text: "The most exciting bonuses and promotions of this week.",
 
-        bonus2Text:
-            "Special free spin opportunity on selected casino games.",
+      today: "Today",
+      yesterday: "Yesterday",
 
-        seeOffer:
-            "See offer →",
+      aboutTitle: "Bonuses and sports news in one place",
+      aboutText: "Discover Mostbet's latest bonuses, promotions, live matches and sports news on one platform.",
+      aboutButton: "View bonuses →",
 
-        specialChance:
-            "SPECIAL OPPORTUNITY",
-
-        bonus3Text:
-            "Offers prepared especially for selected users.",
-
-        details:
-            "View details →",
-
-        sport:
-            "SPORT",
-
-        bonus4Text:
-            "Special campaigns and offers for sports betting.",
-
-        premium:
-            "PREMIUM",
-
-        bonus5Text:
-            "Special opportunities for selected users.",
-
-        new:
-            "NEW",
-
-        bonus6Title:
-            "Special Bonus of the Day",
-
-        bonus6Text:
-            "Discover the most exciting campaign of the day now.",
-
-        live:
-            "LIVE",
-
-        liveMatches:
-            "Live Matches",
-
-        watchMatch:
-            "Watch match",
-
-        news:
-            "NEWS",
-
-        latestNewsTitle:
-            "Latest News",
-
-        allNews:
-            "All news →",
-
-        today:
-            "Today",
-
-        yesterday:
-            "Yesterday",
-
-        news1Title:
-            "Mostbet launches a new bonus campaign",
-
-        news1Text:
-            "Get information about the latest campaign and special offers.",
-
-        readNews:
-            "Read news →",
-
-        news2Title:
-            "New casino bonuses are now active",
-
-        news2Text:
-            "Take a look at the latest bonuses and campaigns in the casino world.",
-
-        news3Title:
-            "Today's most important sports news",
-
-        news3Text:
-            "The latest news from football and other sports.",
-
-        news4Title:
-            "Special bonus offers of the week",
-
-        news4Text:
-            "Discover this week's selected bonuses and special opportunities.",
-
-        aboutTitle:
-            "Bonuses and sports news in one place",
-
-        aboutText:
-            "Easily follow the latest bonus offers, casino campaigns and sports news.",
-
-        copyright:
-            "All rights reserved."
+      footerRights: "All rights reserved."
     },
 
 
     ru: {
+      metaDescription: "Бонусы Mostbet, акции, матчи в прямом эфире и последние спортивные новости.",
+      title: "Mostbet | Бонусы, Новости и Спорт",
 
-        pageTitle:
-            "Mostbet | Бонусы, Новости и Спорт",
+      navBonus: "Бонусы",
+      navNews: "Новости",
+      navLive: "Live",
+      navAbout: "О нас",
+      headerButton: "Смотреть бонусы",
 
-        description:
-            "Бонусы Mostbet, спортивные новости и специальные предложения.",
+      heroLabel: "СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ MOSTBET",
+      heroTitle: "Открой лучшие бонусы<br>в одном месте",
+      heroText: "Следите за бонусами Mostbet, специальными акциями, матчами в прямом эфире и последними спортивными новостями.",
+      heroBonusButton: "Смотреть бонусы",
+      heroNewsButton: "Последние новости",
 
-        headerBonus:
-            "Смотреть бонусы",
+      offerLabel: "СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ",
+      offerTitle: "Бонусы Mostbet",
+      offerText: "Откройте специальные бонусы и акции, подготовленные для вас.",
+      offerButton: "Смотреть предложения →",
 
-        navBonus:
-            "Бонусы",
+      bonusLabel: "СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ",
+      bonusTitle: "Бонусы Mostbet",
+      allButton: "Смотреть все →",
 
-        navNews:
-            "Новости",
+      bonus1Title: "Бонус 200% на депозит",
+      bonus1Text: "Откройте специальное бонусное предложение для вашего первого пополнения.",
+      bonus1Button: "Смотреть бонус →",
 
-        navLive:
-            "Live",
+      bonus2Title: "100 бесплатных вращений",
+      bonus2Text: "Специальные бесплатные вращения в выбранных играх казино.",
+      bonus2Button: "Смотреть предложение →",
 
-        navAbout:
-            "О нас",
+      bonus3Title: "VIP-бонус",
+      bonus3Text: "Эксклюзивные предложения для избранных пользователей.",
+      bonus3Button: "Подробнее →",
 
-        heroLabel:
-            "СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ MOSTBET",
+      bonus4Title: "Спортивные бонусы",
+      bonus4Text: "Специальные акции и предложения для спортивных ставок.",
+      bonus4Button: "Смотреть предложение →",
 
-        heroTitle:
-            "Откройте лучшие бонусы<br><span>в одном месте</span>",
+      bonus5Title: "Специальное премиум-предложение",
+      bonus5Text: "Эксклюзивные возможности для избранных пользователей.",
+      bonus5Button: "Подробнее →",
 
-        heroText:
-            "Бонусы Mostbet, специальные акции, предложения казино и последние спортивные новости.",
+      bonus6Title: "Специальный бонус дня",
+      bonus6Text: "Откройте самое интересное предложение дня прямо сейчас.",
+      bonus6Button: "Смотреть бонус →",
 
-        viewBonuses:
-            "Смотреть бонусы",
+      liveLabel: "LIVE",
+      liveTitle: "Матчи в прямом эфире",
+      league: "ЛИГА ЧЕМПИОНОВ УЕФА",
+      liveStatus: "LIVE",
+      liveButton: "Смотреть матч",
 
-        latestNews:
-            "Последние новости",
+      newsLabel: "НОВОСТИ",
+      newsTitle: "Последние новости",
+      newsAll: "Все новости →",
 
-        specialOffer:
-            "СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ",
+      news1Title: "Mostbet представил новую бонусную кампанию",
+      news1Text: "Новые специальные предложения и бонусные возможности уже доступны.",
 
-        mostbetBonuses:
-            "Бонусы Mostbet",
+      news2Title: "Новые бонусы казино уже активны",
+      news2Text: "Откройте новые бонусные возможности в выбранных играх.",
 
-        heroCardText:
-            "Откройте самые интересные бонусы и акции дня.",
+      news3Title: "Главные спортивные новости дня",
+      news3Text: "Следите за последними новостями из мира спорта.",
 
-        viewOffers:
-            "Смотреть предложения →",
+      news4Title: "Специальные бонусные предложения недели",
+      news4Text: "Самые интересные бонусы и акции этой недели.",
 
-        specialOffers:
-            "СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ",
+      today: "Сегодня",
+      yesterday: "Вчера",
 
-        viewAll:
-            "Смотреть все →",
+      aboutTitle: "Бонусы и спортивные новости в одном месте",
+      aboutText: "Откройте последние бонусы и акции Mostbet, матчи в прямом эфире и спортивные новости на одной платформе.",
+      aboutButton: "Смотреть бонусы →",
 
-        mostbetBonus:
-            "БОНУС MOSTBET",
-
-        bonus1Text:
-            "Откройте специальное бонусное предложение для первого депозита.",
-
-        seeBonus:
-            "Смотреть бонус →",
-
-        bonus2Text:
-            "Специальное предложение с бесплатными вращениями в избранных играх казино.",
-
-        seeOffer:
-            "Смотреть предложение →",
-
-        specialChance:
-            "СПЕЦИАЛЬНАЯ ВОЗМОЖНОСТЬ",
-
-        bonus3Text:
-            "Предложения, подготовленные специально для выбранных пользователей.",
-
-        details:
-            "Подробнее →",
-
-        sport:
-            "СПОРТ",
-
-        bonus4Text:
-            "Специальные акции и предложения для спортивных ставок.",
-
-        premium:
-            "ПРЕМИУМ",
-
-        bonus5Text:
-            "Специальные возможности для выбранных пользователей.",
-
-        new:
-            "НОВОЕ",
-
-        bonus6Title:
-            "Специальный бонус дня",
-
-        bonus6Text:
-            "Откройте самое интересное предложение дня прямо сейчас.",
-
-        live:
-            "LIVE",
-
-        liveMatches:
-            "Матчи в прямом эфире",
-
-        watchMatch:
-            "Смотреть матч",
-
-        news:
-            "НОВОСТИ",
-
-        latestNewsTitle:
-            "Последние новости",
-
-        allNews:
-            "Все новости →",
-
-        today:
-            "Сегодня",
-
-        yesterday:
-            "Вчера",
-
-        news1Title:
-            "Mostbet представил новую бонусную кампанию",
-
-        news1Text:
-            "Узнайте о последней кампании и специальных предложениях.",
-
-        readNews:
-            "Читать новость →",
-
-        news2Title:
-            "Новые бонусы казино уже активны",
-
-        news2Text:
-            "Ознакомьтесь с последними бонусами и акциями в мире казино.",
-
-        news3Title:
-            "Главные спортивные новости дня",
-
-        news3Text:
-            "Последние новости футбола и других видов спорта.",
-
-        news4Title:
-            "Специальные бонусные предложения недели",
-
-        news4Text:
-            "Откройте избранные бонусы и специальные возможности этой недели.",
-
-        aboutTitle:
-            "Бонусы и спортивные новости в одном месте",
-
-        aboutText:
-            "Удобно следите за последними бонусными предложениями, акциями казино и спортивными новостями.",
-
-        copyright:
-            "Все права защищены."
+      footerRights: "Все права защищены."
     },
 
 
     tr: {
+      metaDescription: "Mostbet bonusları, kampanyalar, canlı maçlar ve son spor haberleri.",
+      title: "Mostbet | Bonuslar, Haberler ve Spor",
 
-        pageTitle:
-            "Mostbet | Bonuslar, Haberler ve Spor",
+      navBonus: "Bonuslar",
+      navNews: "Haberler",
+      navLive: "Canlı",
+      navAbout: "Hakkımızda",
+      headerButton: "Bonuslara bak",
 
-        description:
-            "Mostbet bonusları, spor haberleri ve özel teklifler.",
+      heroLabel: "MOSTBET ÖZEL TEKLİFLER",
+      heroTitle: "En iyi bonusları<br>tek yerde keşfet",
+      heroText: "Mostbet bonusları, özel kampanyalar, canlı maçlar ve son spor haberleri ile güncel tekliflerden haberdar olun.",
+      heroBonusButton: "Bonusları gör",
+      heroNewsButton: "Son haberler",
 
-        headerBonus:
-            "Bonusları gör",
+      offerLabel: "ÖZEL TEKLİF",
+      offerTitle: "Mostbet Bonusları",
+      offerText: "Sizin için hazırlanmış özel bonusları ve kampanyaları keşfedin.",
+      offerButton: "Tekliflere bak →",
 
-        navBonus:
-            "Bonuslar",
+      bonusLabel: "ÖZEL TEKLİFLER",
+      bonusTitle: "Mostbet Bonusları",
+      allButton: "Tümüne bak →",
 
-        navNews:
-            "Haberler",
+      bonus1Title: "%200 Yatırım Bonusu",
+      bonus1Text: "İlk yatırımınız için özel bonus fırsatını keşfedin.",
+      bonus1Button: "Bonusu gör →",
 
-        navLive:
-            "Canlı",
+      bonus2Title: "100 Free Spins",
+      bonus2Text: "Seçili casino oyunlarında özel free spin fırsatları.",
+      bonus2Button: "Teklifi gör →",
 
-        navAbout:
-            "Hakkımızda",
+      bonus3Title: "VIP Bonus",
+      bonus3Text: "Seçili kullanıcılar için hazırlanmış özel teklifler.",
+      bonus3Button: "Detaylı bak →",
 
-        heroLabel:
-            "MOSTBET ÖZEL TEKLİFLERİ",
+      bonus4Title: "Spor Bonusları",
+      bonus4Text: "Spor bahisleri için özel kampanyalar ve teklifler.",
+      bonus4Button: "Teklifi gör →",
 
-        heroTitle:
-            "En iyi bonusları<br><span>tek bir yerde keşfedin</span>",
+      bonus5Title: "Özel Premium Teklif",
+      bonus5Text: "Seçili kullanıcılar için özel fırsatlar.",
+      bonus5Button: "Detaylı bak →",
 
-        heroText:
-            "Mostbet bonusları, özel kampanyalar, casino teklifleri ve en son spor haberleri.",
+      bonus6Title: "Günün Özel Bonusu",
+      bonus6Text: "Bugünün en ilgi çekici kampanyasını şimdi keşfedin.",
+      bonus6Button: "Bonusu gör →",
 
-        viewBonuses:
-            "Bonusları gör",
+      liveLabel: "CANLI",
+      liveTitle: "Canlı Maçlar",
+      league: "UEFA ŞAMPİYONLAR LİGİ",
+      liveStatus: "CANLI",
+      liveButton: "Maçı izle",
 
-        latestNews:
-            "Son haberler",
+      newsLabel: "HABERLER",
+      newsTitle: "Son Haberler",
+      newsAll: "Tüm haberler →",
 
-        specialOffer:
-            "ÖZEL TEKLİF",
+      news1Title: "Mostbet yeni bonus kampanyasını duyurdu",
+      news1Text: "Yeni özel teklifler ve bonus fırsatları artık aktif.",
 
-        mostbetBonuses:
-            "Mostbet Bonusları",
+      news2Title: "Yeni casino bonusları artık aktif",
+      news2Text: "Seçili oyunlarda yeni bonus fırsatlarını keşfedin.",
 
-        heroCardText:
-            "Günün en ilgi çekici bonuslarını ve kampanyalarını keşfedin.",
+      news3Title: "Günün en önemli spor haberleri",
+      news3Text: "Spor dünyasından son haberleri takip edin.",
 
-        viewOffers:
-            "Teklifleri gör →",
+      news4Title: "Haftanın özel bonus teklifleri",
+      news4Text: "Bu haftanın en ilgi çekici bonusları ve kampanyaları.",
 
-        specialOffers:
-            "ÖZEL TEKLİFLER",
+      today: "Bugün",
+      yesterday: "Dün",
 
-        viewAll:
-            "Tümünü gör →",
+      aboutTitle: "Bonuslar ve spor haberleri tek yerde",
+      aboutText: "Mostbet'in en yeni bonuslarını, kampanyalarını, canlı maçlarını ve spor haberlerini tek platformda keşfedin.",
+      aboutButton: "Bonuslara bak →",
 
-        mostbetBonus:
-            "MOSTBET BONUSU",
-
-        bonus1Text:
-            "İlk yatırımınız için özel bonus fırsatını keşfedin.",
-
-        seeBonus:
-            "Bonusu gör →",
-
-        bonus2Text:
-            "Seçili casino oyunlarında özel free spin fırsatı.",
-
-        seeOffer:
-            "Teklifi gör →",
-
-        specialChance:
-            "ÖZEL FIRSAT",
-
-        bonus3Text:
-            "Seçili kullanıcılar için hazırlanmış özel teklifler.",
-
-        details:
-            "Detaylı incele →",
-
-        sport:
-            "SPOR",
-
-        bonus4Text:
-            "Spor bahisleri için özel kampanya ve teklifler.",
-
-        premium:
-            "PREMİUM",
-
-        bonus5Text:
-            "Seçili kullanıcılar için özel fırsatlar.",
-
-        new:
-            "YENİ",
-
-        bonus6Title:
-            "Günün Özel Bonusu",
-
-        bonus6Text:
-            "Günün en ilgi çekici kampanyasını şimdi keşfedin.",
-
-        live:
-            "CANLI",
-
-        liveMatches:
-            "Canlı Maçlar",
-
-        watchMatch:
-            "Maçı izle",
-
-        news:
-            "HABERLER",
-
-        latestNewsTitle:
-            "Son Haberler",
-
-        allNews:
-            "Tüm haberler →",
-
-        today:
-            "Bugün",
-
-        yesterday:
-            "Dün",
-
-        news1Title:
-            "Mostbet yeni bonus kampanyasını tanıttı",
-
-        news1Text:
-            "En son kampanya ve özel teklifler hakkında bilgi alın.",
-
-        readNews:
-            "Haberi oku →",
-
-        news2Title:
-            "Yeni casino bonusları artık aktif",
-
-        news2Text:
-            "Casino dünyasındaki en yeni bonus ve kampanyalara göz atın.",
-
-        news3Title:
-            "Günün en önemli spor haberleri",
-
-        news3Text:
-            "Futbol ve diğer spor dallarından en son haberler.",
-
-        news4Title:
-            "Haftanın özel bonus teklifleri",
-
-        news4Text:
-            "Bu haftanın seçilmiş bonuslarını ve özel fırsatlarını keşfedin.",
-
-        aboutTitle:
-            "Bonuslar ve spor haberleri tek bir yerde",
-
-        aboutText:
-            "En son bonus tekliflerini, casino kampanyalarını ve spor haberlerini kolayca takip edin.",
-
-        copyright:
-            "Tüm hakları saklıdır."
+      footerRights: "Tüm hakları saklıdır."
     }
+  };
 
-};
 
+  /* =========================================
+     DİLİ DƏYİŞ
+  ========================================= */
 
-function setLanguage(lang) {
+  function setLanguage(lang) {
 
-    const t = translations[lang] || translations.az;
+    if (!translations[lang]) {
+      lang = "en";
+    }
 
     document.documentElement.lang = lang;
 
-    document
-        .querySelectorAll("[data-i18n]")
-        .forEach(function(el) {
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
 
-            const key = el.getAttribute("data-i18n");
+      const key = element.getAttribute("data-i18n");
 
-            if (t[key] !== undefined) {
-                el.innerHTML = t[key];
-            }
+      if (translations[lang][key] !== undefined) {
+        element.innerHTML = translations[lang][key];
+      }
 
-        });
+    });
+
+    const meta = document.querySelector('meta[name="description"]');
+
+    if (meta && translations[lang].metaDescription) {
+      meta.setAttribute(
+        "content",
+        translations[lang].metaDescription
+      );
+    }
+
+    document.title = translations[lang].title;
+
+    const selector =
+      document.getElementById("languageSelect");
+
+    if (selector) {
+      selector.value = lang;
+    }
+  }
 
 
-    const meta = document.querySelector(
-        '[data-i18n-meta="description"]'
+  /* =========================================
+     MANUAL DİL SEÇİMİ
+  ========================================= */
+
+  function saveLanguage(lang) {
+
+    localStorage.setItem(
+      "preferredLanguage",
+      lang
     );
 
-    if (meta && t.description) {
-        meta.setAttribute("content", t.description);
+    setLanguage(lang);
+  }
+
+
+  const languageSelect =
+    document.getElementById("languageSelect");
+
+  if (languageSelect) {
+
+    languageSelect.addEventListener(
+      "change",
+      function () {
+
+        saveLanguage(this.value);
+
+      }
+    );
+  }
+
+
+  /* =========================================
+     ÖLKƏYƏ GÖRƏ AVTOMATİK DİL
+  ========================================= */
+
+  async function detectCountryLanguage() {
+
+    /*
+      Əgər istifadəçi dili əvvəllər özü seçibsə,
+      avtomatik ölkə sistemi onun seçiminə toxunmur.
+    */
+
+    const savedLanguage =
+      localStorage.getItem("preferredLanguage");
+
+    if (
+      savedLanguage &&
+      translations[savedLanguage]
+    ) {
+
+      setLanguage(savedLanguage);
+
+      return;
     }
 
 
-    document.title = t.pageTitle;
+    /*
+      API cavab verənə qədər browser dilini
+      müvəqqəti istifadə edirik.
+    */
 
-    localStorage.setItem(
-        "preferredLanguage",
-        lang
-    );
-}
-
-
-const languageSelect =
-    document.getElementById("languageSelect");
+    const browserLanguage =
+      (navigator.language || "").toLowerCase();
 
 
-if (languageSelect) {
+    if (browserLanguage.startsWith("az")) {
 
-    const savedLanguage =
-        localStorage.getItem("preferredLanguage") || "az";
+      setLanguage("az");
 
-    languageSelect.value =
-        savedLanguage;
+    } else if (
+      browserLanguage.startsWith("tr")
+    ) {
 
-    setLanguage(savedLanguage);
+      setLanguage("tr");
+
+    } else if (
+      browserLanguage.startsWith("ru")
+    ) {
+
+      setLanguage("ru");
+
+    } else {
+
+      setLanguage("en");
+
+    }
 
 
-    languageSelect.addEventListener(
-        "change",
-        function() {
+    /*
+      IP API
+      Ölkəni müəyyən edir.
+    */
 
-            setLanguage(this.value);
+    try {
 
+      const response = await fetch(
+        "https://ipapi.co/json/",
+        {
+          method: "GET",
+          cache: "no-store"
         }
-    );
+      );
 
-}
+
+      if (!response.ok) {
+        throw new Error(
+          "Country API error"
+        );
+      }
+
+
+      const data =
+        await response.json();
+
+
+      const country =
+        String(
+          data.country_code || ""
+        ).toUpperCase();
+
+
+      let detectedLanguage =
+        "en";
+
+
+      /*
+        AZ → Azərbaycan
+        TR → Türkiyə
+        RU → Rusiya
+        Digərləri → İngilis
+      */
+
+      if (country === "AZ") {
+
+        detectedLanguage = "az";
+
+      } else if (country === "TR") {
+
+        detectedLanguage = "tr";
+
+      } else if (country === "RU") {
+
+        detectedLanguage = "ru";
+
+      } else {
+
+        detectedLanguage = "en";
+
+      }
+
+
+      setLanguage(
+        detectedLanguage
+      );
+
+
+    } catch (error) {
+
+      console.warn(
+        "Ölkə müəyyən edilə bilmədi. Browser dili istifadə olunur.",
+        error
+      );
+
+    }
+  }
+
+
+  /*
+    Sayt açılan kimi ölkəyə görə dili müəyyən et.
+  */
+
+  detectCountryLanguage();
 
 </script>
 
