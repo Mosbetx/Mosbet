@@ -1077,8 +1077,21 @@ button {
         display: none;
     }
 
+    /* MOBİLDƏ DİL SEÇİMİ GÖRÜNSÜN */
+    .language-switcher {
+        display: block;
+        margin-left: auto;
+    }
+
+    .language-switcher select {
+        min-width: 62px;
+        padding: 9px 24px 9px 8px;
+        font-size: 12px;
+    }
+
     .mobile-menu {
         display: block;
+        margin-left: 0;
     }
 
     .nav {
