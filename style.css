@@ -828,6 +828,169 @@ button {
 
 
 /* =========================================
+   ABOUT BONUS INFO
+========================================= */
+
+.about-bonus-info {
+    margin-top: 35px;
+    padding: 32px;
+
+    background: #f8fafb;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(15, 35, 55, 0.04);
+}
+
+.about-bonus-info h2 {
+    color: var(--text);
+
+    font-size: 28px;
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+
+    letter-spacing: -0.6px;
+}
+
+.about-bonus-intro {
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.about-bonus-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.about-bonus-item {
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.about-bonus-item:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--green);
+
+    box-shadow: 0 8px 25px rgba(15, 35, 55, 0.07);
+}
+
+.about-bonus-item h3 {
+    color: var(--text);
+
+    font-size: 17px;
+    line-height: 1.3;
+
+    margin-bottom: 8px;
+}
+
+.about-bonus-item p {
+    color: var(--muted);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.about-bonus-warning {
+    margin-top: 25px;
+
+    padding: 22px;
+
+    background: #fff9ed;
+
+    border: 1px solid #f0dfb5;
+    border-radius: 15px;
+}
+
+.about-bonus-warning h3 {
+    color: #8a6415;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.about-bonus-warning p {
+    color: #6f5a2c;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+}
+
+.about-bonus-warning ul {
+    padding-left: 20px;
+
+    color: #6f5a2c;
+}
+
+.about-bonus-warning li {
+    margin-bottom: 6px;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.about-bonus-disclaimer {
+    margin-top: 20px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    text-align: center;
+}
+
+.about-bonus-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 22px;
+
+    min-height: 46px;
+
+    padding: 0 20px;
+
+    background: var(--green);
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    transition: 0.2s;
+}
+
+.about-bonus-cta:hover {
+    background: var(--green-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
    FOOTER
 ========================================= */
 
@@ -1073,6 +1236,37 @@ button {
     }
 
 
+    /* ABOUT BONUS */
+
+    .about-bonus-info {
+        margin-top: 25px;
+
+        padding: 22px;
+
+        border-radius: 17px;
+    }
+
+    .about-bonus-info h2 {
+        font-size: 24px;
+    }
+
+    .about-bonus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-bonus-item {
+        padding: 17px;
+    }
+
+    .about-bonus-warning {
+        padding: 18px;
+    }
+
+    .about-bonus-cta {
+        width: 100%;
+    }
+
+
     /* FOOTER */
 
     .footer-inner {
@@ -1136,6 +1330,24 @@ button {
 
     .team strong {
         font-size: 12px;
+    }
+
+    .about-bonus-info {
+        padding: 17px;
+    }
+
+    .about-bonus-info h2 {
+        font-size: 22px;
+    }
+
+    .about-bonus-item h3 {
+        font-size: 16px;
+    }
+
+    .about-bonus-item p,
+    .about-bonus-warning p,
+    .about-bonus-warning li {
+        font-size: 13px;
     }
 
 }
