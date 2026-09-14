@@ -2333,11 +2333,7 @@ if(nav){
 nav.classList.remove("active");									
 }									
 									
-history.replaceState(									
-null,									
-,									
-#haqqimizda									
-);									
+history.replaceState(null, "", "#haqqimizda");									
 									
 });									
 									
@@ -2351,11 +2347,7 @@ e.preventDefault();
 									
 showHomePage();									
 									
-history.replaceState(									
-null,									
-,									
-#home									
-);									
+history.replaceState(null, "", "#home");									
 									
 });									
 									
@@ -2434,17 +2426,11 @@ else{
 detectedLanguage="en";									
 }									
 									
-setLanguage(									
-detectedLanguage,									
-FALSE									
-);									
+setLanguage(detectedLanguage, false);									
 									
 }catch(error){									
 									
-console.warn(									
-Ölkə müəyyən edilə bilmədi. Browser dili istifadə olunur.,									
-error									
-);									
+console.warn("Ölkə müəyyən edilə bilmədi. Browser dili istifadə olunur.", error);									
 									
 }									
 									
